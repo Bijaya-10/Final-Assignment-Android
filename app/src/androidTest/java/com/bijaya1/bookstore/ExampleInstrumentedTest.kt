@@ -1,4 +1,4 @@
-package com.bijaya1.weekfiveassignmentone
+package com.bijaya1.bookstore
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
