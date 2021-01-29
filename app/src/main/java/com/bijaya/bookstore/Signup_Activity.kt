@@ -88,7 +88,7 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
         }
         if (etUsername.text.toString()==""){
             return false
-            etUsername.error = "Username cant be empty"
+            etUsername.error = "Username cant be emptys"
         }
         if (etPassword.text.toString()==""){
             return false
