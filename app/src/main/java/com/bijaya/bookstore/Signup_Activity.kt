@@ -6,7 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.bijaya.bookstore.entity.Customer
+import com.bijaya.bookstore.repository.CustomerRepository
 import com.bijaya1.weekfiveassignmentone.Users.Users
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.Main
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class Signup_Activity : AppCompatActivity(), View.OnClickListener {
 
@@ -15,14 +22,13 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
     private lateinit var etCoventryID:EditText
     private lateinit var etFname:EditText
     private lateinit var etLname:EditText
-    private lateinit var etProfile:EditText
     private lateinit var etUsername:EditText
     private lateinit var etPassword:EditText
-    private lateinit var etBatch:Spinner
+    private lateinit var etCPassword:EditText
     private lateinit var loginLink:TextView
 
     private var userList = arrayListOf<Users>()
-    private val batch = arrayListOf("Choose Batch","24B", "25C", "24B")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,27 +37,67 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
         etCoventryID = findViewById(R.id.etCoventryID)
         etFname = findViewById(R.id.etFname)
         etLname = findViewById(R.id.etLname)
-        etProfile = findViewById(R.id.etProfile)
         etUsername = findViewById(R.id.etUsername)
         etPassword = findViewById(R.id.etPassword)
-        etBatch = findViewById(R.id.etBatch)
+        etCPassword= findViewById(R.id.etCPassword)
+
+
         loginLink = findViewById(R.id.loginLink)
 
-        btnRegister.setOnClickListener(this)
+        btnRegister.setOnClickListener{
+            val firstname = etFname.text.toString()
+            val lastname = etLname.text.toString()
+            val username = etUsername.text.toString()
+            val password = etPassword.text.toString()
+            val CPassword = etCPassword.text.toString()
+
+            if (password != CPassword) {
+                etPassword.error = "Password does not match"
+                etPassword.requestFocus()
+                return@setOnClickListener
+            } else {
+                val customer = Customer(firstname = firstname, lastname = lastname, username = username, password = password)
+
+                CoroutineScope(Dispatchers.IO).launch {
+                    try {
+                        val userRepository = CustomerRepository()
+                        val response = userRepository.registerUser(customer)
+                        if (response.success == true) {
+                            withContext(Main) {
+                                Toast.makeText(
+                                    this@Signup_Activity,
+                                    "Register Successful",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
+                    }
+                    catch (ex: Exception){
+                        withContext(Main){
+                            Toast.makeText(this@Signup_Activity, ex.toString(), Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+
+                // Api code goes here
+
+            }
+        }
+
+
+
+
+
         loginLink.setOnClickListener(this)
 
-//        loadUser()
-        val adapter = ArrayAdapter(
-                this, android.R.layout.simple_list_item_1, batch
-        )
-        etBatch.adapter= adapter
+
     }
 
     override fun onClick(v: View?) {
         when (v?.id){
             R.id.btnRegister ->{
                 if (validate()){
-                    val user = Users(etCoventryID.text.toString().toInt(), etFname.text.toString(), etLname.text.toString(), etUsername.text.toString(), etPassword.text.toString(), etProfile.text.toString(),etBatch.toString())
+                    val user = Users(etCoventryID.text.toString().toInt(), etFname.text.toString(), etLname.text.toString(), etUsername.text.toString(), etPassword.text.toString())
                     var intent = Intent();
                     intent.putExtra("user",user);
                     setResult(Activity.RESULT_OK,intent);
@@ -94,16 +140,17 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
             return false
             etPassword.error = "Password cant be empty"
         }
-        if (etBatch.toString()=="Choose Batch"){
+        if (etCPassword.text.toString()==""){
             return false
-            Toast.makeText(this, "Please Select Your Batch", Toast.LENGTH_SHORT).show()
+            etCPassword.error = "cant be empty"
         }
+
         return true
     }
 
     companion object {
         fun loadLogin(activity: Signup_Activity){
-            val intent = Intent(activity, LoginActivity::class.java)
+            val intent = Intent(activity, LoginActivity ::class.java)
 //            intent.putExtra("userlist", activity.userList)
             activity.startActivity(intent)
         }

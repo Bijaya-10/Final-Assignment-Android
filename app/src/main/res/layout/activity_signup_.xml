@@ -100,26 +100,7 @@
                     android:backgroundTint="#FFFFFF"
                     />
             </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layoutProfile"
-                android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.9"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="5dp"
-                android:textColorHint="#808080"
-                app:layout_constraintTop_toBottomOf="@+id/layoutLname">
-                <EditText
-                    android:id="@+id/etProfile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Paste Your Profile Link Here"
-                    android:textColor="#000000"
-                    android:textColorHint="#000000"
-                    android:backgroundTint="#FFFFFF"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutUsername"
                 android:layout_width="0dp"
@@ -129,7 +110,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="5dp"
                 android:textColorHint="#808080"
-                app:layout_constraintTop_toBottomOf="@+id/layoutProfile">
+                app:layout_constraintTop_toBottomOf="@+id/layoutLname">
                 <EditText
                     android:id="@+id/etUsername"
                     android:layout_width="match_parent"
@@ -161,29 +142,38 @@
                     android:inputType="textPassword"
                     />
             </com.google.android.material.textfield.TextInputLayout>
-            <RelativeLayout
-                android:id="@+id/layoutBatch"
-                app:layout_constraintTop_toBottomOf="@+id/layoutPassword"
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCPassword"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="0dp"
                 android:layout_marginTop="5dp"
                 android:textColorHint="#808080"
-                app:layout_constraintWidth_percent="0.9"
-                android:layout_height="wrap_content">
-                <Spinner
-                    android:id="@+id/etBatch"
-                    android:textColor="#000000"
-                    android:backgroundTint="#FFFFFF"
-                    android:textColorHint="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPassword">
+                <EditText
+                    android:id="@+id/etCPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"/>
-            </RelativeLayout>
+                    android:layout_height="wrap_content"
+                    android:hint="CPassword"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="textPassword"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
             <Button
                 android:id="@+id/btnRegister"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                app:layout_constraintTop_toBottomOf="@+id/layoutBatch"
+                app:layout_constraintTop_toBottomOf="@+id/layoutCPassword"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="Register"
