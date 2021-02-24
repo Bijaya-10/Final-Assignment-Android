@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/linearLayout"
+    tools:context=".LoginActivity">
+
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:text="Product"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+    <ScrollView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeading">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/invalid"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="50dp"
+                android:textColor="#BF0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCustomerName"
+                android:layout_width="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/invalid"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etCustomerName"
+                    android:textColor="#000000"
+                    android:textColorHint="#808080"
+                    android:backgroundTint="#FFF"
+                    android:hint="Book name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCustomerBook"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/layoutCustomerName">
+                <EditText
+                    android:id="@+id/etCustomerBook"
+                    android:hint="Book Number"
+                    android:textColor="#000000"
+                    android:textColorHint="#808080"
+                    android:backgroundTint="#FFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCustomerNumber"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/layoutCustomerBook">
+                <EditText
+                    android:id="@+id/etCustomerNumber"
+                    android:hint="Book ID"
+                    android:textColor="#000000"
+                    android:textColorHint="#808080"
+                    android:backgroundTint="#FFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/layoutCustomerNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Add"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:background="@color/design_default_color_primary_dark"
+                android:textAllCaps="false"
+                android:layout_marginTop="40dp"
+                app:layout_constraintWidth_percent="0.7"
+                style="?android:attr/borderlessButtonStyle"
+                android:elevation="2dp"
+                />
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
