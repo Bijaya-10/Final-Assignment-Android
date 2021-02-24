@@ -50,15 +50,7 @@
                 android:layout_marginTop="5dp"
                 android:textColorHint="#808080"
                 app:layout_constraintTop_toBottomOf="@+id/invalid">
-                <EditText
-                    android:id="@+id/etCoventryID"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Coventry ID"
-                    android:textColor="#000000"
-                    android:textColorHint="#000000"
-                    android:backgroundTint="#FFFFFF"
-                    />
+
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutFname"

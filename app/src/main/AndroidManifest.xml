@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeekFiveAssignmentOne">
-        <activity android:name="com.bijaya.bookstore.SplashActivity"></activity>
+        <activity android:name="com.bijaya.bookstore.ProductActivity"></activity>
+        <activity android:name="com.bijaya.bookstore.Users.StaffActivity" />
+        <activity android:name="com.bijaya.bookstore.SplashActivity" />
         <activity android:name="com.bijaya.bookstore.PermissionActivity" />
         <activity android:name=".PostActivity" />
         <activity android:name=".Signup_Activity" />

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.View
 import android.widget.*
 import com.bijaya.bookstore.entity.Customer
@@ -19,7 +20,7 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var btnRegister:Button
 
-    private lateinit var etCoventryID:EditText
+
     private lateinit var etFname:EditText
     private lateinit var etLname:EditText
     private lateinit var etUsername:EditText
@@ -34,7 +35,6 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup_)
         btnRegister = findViewById(R.id.btnRegister)
-        etCoventryID = findViewById(R.id.etCoventryID)
         etFname = findViewById(R.id.etFname)
         etLname = findViewById(R.id.etLname)
         etUsername = findViewById(R.id.etUsername)
@@ -60,8 +60,8 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
 
                 CoroutineScope(Dispatchers.IO).launch {
                     try {
-                        val userRepository = CustomerRepository()
-                        val response = userRepository.registerUser(customer)
+                        val customerRepository = CustomerRepository()
+                        val response = customerRepository.registerUser(customer)
                         if (response.success == true) {
                             withContext(Main) {
                                 Toast.makeText(
@@ -97,9 +97,9 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
         when (v?.id){
             R.id.btnRegister ->{
                 if (validate()){
-                    val user = Users(etCoventryID.text.toString().toInt(), etFname.text.toString(), etLname.text.toString(), etUsername.text.toString(), etPassword.text.toString())
+                    val customer = Customer(etFname.text.toString(), etLname.text.toString(), etUsername.text.toString(), etPassword.text.toString())
                     var intent = Intent();
-                    intent.putExtra("user",user);
+                    intent.putExtra("user",customer);
                     setResult(Activity.RESULT_OK,intent);
                     finish();
                 }
@@ -120,10 +120,7 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
 //    }
 
     fun validate():Boolean{
-        if (etCoventryID.text.toString()==""){
-            return false
-            etCoventryID.error = "Please insert CUID "
-        }
+
         if (etFname.text.toString()==""){
             return false
             etFname.error = "this field is empty"
@@ -155,4 +152,8 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
             activity.startActivity(intent)
         }
     }
+}
+
+private fun Parcelable.putExtra(s: String, customer: Customer) {
+
 }

@@ -8,11 +8,11 @@ import com.bijaya.bookstore.response.LoginResponse
 
 class CustomerRepository     : MyApiRequest() {
 
-    private val userAPI = ServiceBuilder.buildService(CustomerAPI::class.java)
+    private val customerAPI = ServiceBuilder.buildService(CustomerAPI::class.java)
 
     suspend fun registerUser(customer: Customer): LoginResponse {
         return apiRequest {
-            userAPI.registerUser(customer)
+            customerAPI.registerUser(customer)
         }
     }
 
@@ -20,7 +20,7 @@ class CustomerRepository     : MyApiRequest() {
 
     suspend fun checkUser(username :String, password : String) : LoginResponse{
         return apiRequest {
-            userAPI.checkUser(username, password)
+            customerAPI.checkUser(username, password)
         }
     }
 }
