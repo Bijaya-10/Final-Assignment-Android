@@ -29,7 +29,7 @@ class PermissionActivity : AppCompatActivity() {
         )
     }
 
-    //permission
+    //permissio
     private fun hasPermission(): Boolean {
         var hasPermission = true
         for (permission in permissions) {
