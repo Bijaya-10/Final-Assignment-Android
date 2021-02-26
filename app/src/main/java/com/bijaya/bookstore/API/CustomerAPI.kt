@@ -10,7 +10,7 @@ import retrofit2.http.POST
 
 interface CustomerAPI {
     // Register User
-    @POST("auth/register")
+    @POST("/register")
 
     suspend fun registerUser(
         @Body customer : Customer
@@ -19,7 +19,7 @@ interface CustomerAPI {
 
     //Login user
     @FormUrlEncoded
-    @POST("auth/login")
+    @POST("/login")
 
     suspend fun checkUser(
         @Field("username") username : String,

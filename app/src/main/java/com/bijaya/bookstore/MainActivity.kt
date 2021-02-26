@@ -54,26 +54,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         stories.adapter = storyAdapter
     }
     private fun loadUser(){
-        userList.add(Users(10250123, "bhanubhakta", "bhandari", "bhanubhakta123", "password","https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80", "24B"))
-        userList.add(Users(10250124, "sabin", "chapagain", "sabin123", "password","https://pbs.twimg.com/media/Bw6VkhPIEAAEXU-?format=jpg&name=small","24B"))
-        userList.add(Users(10250125, "ramesh", "bhandari", "ramesh123", "password","https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80", "25A"))
-        userList.add(Users(10250126, "unish", "bhattarai", "unish123", "password","https://images.unsplash.com/photo-1441786485319-5e0f0c092803?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80", "24B"))
-        userList.add(Users(10250127, "Anish", "Nepal", "anish123", "password","https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80", "24B"))
-        userList.add(Users(10250127, "Saurav", "Parajuli", "saurav123", "password","https://images.unsplash.com/photo-1441786485319-5e0f0c092803?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80", "24B"))
-        userList.add(Users(10250128, "Roman", "Dulal", "roman123", "password","https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80", "24B"))
+        userList.add(Users(1, "bhanubhakta", "bhandari", "bhanubhakta123", "password","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FThis-Time-Will-Different-Permanent-ebook%2Fdp%2FB076QJQVNC&psig=AOvVaw0_P56gxupqbtir2kL7wMxz&ust=1614440679135000&source=images&cd=vfe&ved=0CAYQjRxqFwoTCPjX2a3yh-8CFQAAAAAdAAAAABAD", "24B"))
+        userList.add(Users(2, "sabin", "chapagain", "sabin123", "password","https://ik.imagekit.io/panmac/tr:q-75,di-placeholder_portrait_aMjPtD9YZ.jpg,w-350,pr-true,bl/edition/9781529032741.jpg","24B"))
+        userList.add(Users(3, "ramesh", "bhandari", "ramesh123", "password","https://images2.penguinrandomhouse.com/cover/9780399564277", "25A"))
+        userList.add(Users(4, "unish", "bhattarai", "unish123", "password","https://cdn.waterstones.com/bookjackets/large/9781/7864/9781786495259.jpg", "24B"))
+        userList.add(Users(5, "Anish", "Nepal", "anish123", "password","https://dynamic.indigoimages.ca/books/031242678x.jpg?quality=85&width=380&maxheight=515&lang=en", "24B"))
+        userList.add(Users(6, "Saurav", "Parajuli", "saurav123", "password","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRtasQocLeuvDto0VSNZJI-XNUUI-3cDiKIA&usqp=CAU", "24B"))
+        userList.add(Users(7, "Roman", "Dulal", "roman123", "password","https://images.gr-assets.com/books/1415375471l/119073.jpg", "24B"))
     }
     private fun loadPost(){
-        postList.add(Post("sabin", "https://pbs.twimg.com/media/Bw6VkhPIEAAEXU-?format=jpg&name=small", "Happy Birthday Bro", "https://pbs.twimg.com/media/Bw6VkhPIEAAEXU-?format=jpg&name=small"))
-        postList.add(Post("bhanubhakta", "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80","Happy Married Life Jaya", "https://cdn0.weddingwire.in/articles/images/9/4/1/0/img_10149/indian-wedding-couple-images-mahima-bhatia-photography-lead-image.jpg"))
-        postList.add(Post("ramesh","https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80", "Hey there!","https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"))
-        postList.add(Post("Anish", "https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80","This is My status",""))
-        postList.add(Post("sabin", "https://pbs.twimg.com/media/Bw6VkhPIEAAEXU-?format=jpg&name=small","Beauty of Kathmandu","https://cdn1.i-scmp.com/sites/default/files/styles/120x80/public/images/methode/2019/02/06/3a21faa6-2052-11e9-9b66-f8d7b487d426_image_hires_164133.jpg?itok=N5j7OlEH&v=1549442505"))
-        postList.add(Post("saurav", "https://images.unsplash.com/photo-1441786485319-5e0f0c092803?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80","This is My status",""))
-        postList.add(Post("sabin", "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80","My Friend","https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"))
-        postList.add(Post("Roman", "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80","My lovely Sister","https://upload.wikimedia.org/wikipedia/commons/c/c0/Young_girl_smiling_in_sunshine_%282%29.jpg"))
-        postList.add(Post("Unish", "https://images.unsplash.com/photo-1441786485319-5e0f0c092803?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80","Feeling Sad",""))
-        postList.add(Post("sabin", "https://pbs.twimg.com/media/Bw6VkhPIEAAEXU-?format=jpg&name=small","Feeling proud to be a student at Softwarica",""))
-        postList.add(Post("bhanubhakta", "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80","This is My status",""))
+        postList.add(Post("dfidfi", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FThis-Time-Will-Different-Permanent-ebook%2Fdp%2FB076QJQVNC&psig=AOvVaw0_P56gxupqbtir2kL7wMxz&ust=1614440679135000&source=images&cd=vfe&ved=0CAYQjRxqFwoTCPjX2a3yh-8CFQAAAAAdAAAAABAD", "Happy Birthday Bro", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FThis-Time-Will-Different-Permanent-ebook%2Fdp%2FB076QJQVNC&psig=AOvVaw0_P56gxupqbtir2kL7wMxz&ust=1614440679135000&source=images&cd=vfe&ved=0CAYQjRxqFwoTCPjX2a3yh-8CFQAAAAAdAAAAABAD"))
+        postList.add(Post("fjsjds", "https://images-na.ssl-images-amazon.com/images/I/41tTZ6cwHHL.jpg","Happy Married Life Jaya", "https://images-na.ssl-images-amazon.com/images/I/41tTZ6cwHHL.jpg"))
+        postList.add(Post("rfdfdf","https://ik.imagekit.io/panmac/tr:q-75,di-placeholder_portrait_aMjPtD9YZ.jpg,w-350,pr-true,bl/edition/9781529032741.jpg", "Hey there!","https://ik.imagekit.io/panmac/tr:q-75,di-placeholder_portrait_aMjPtD9YZ.jpg,w-350,pr-true,bl/edition/9781529032741.jpg"))
+        postList.add(Post("Afsdfs", "https://images2.penguinrandomhouse.com/cover/9780399564277","This is My status","https://images2.penguinrandomhouse.com/cover/9780399564277"))
+        postList.add(Post("sabsfsfin", "https://cdn.waterstones.com/bookjackets/large/9781/7864/9781786495259.jpg","Beauty of Kathmandu","https://cdn.waterstones.com/bookjackets/large/9781/7864/9781786495259.jpg"))
+        postList.add(Post("sffavff", "https://dynamic.indigoimages.ca/books/031242678x.jpg?quality=85&width=380&maxheight=515&lang=en","This is My status","https://dynamic.indigoimages.ca/books/031242678x.jpg?quality=85&width=380&maxheight=515&lang=en"))
+        postList.add(Post("sabidfdfdfn", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRtasQocLeuvDto0VSNZJI-XNUUI-3cDiKIA&usqp=CAU","My Friend","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRtasQocLeuvDto0VSNZJI-XNUUI-3cDiKIA&usqp=CAU"))
+        postList.add(Post("Rosfsfs", "https://images.gr-assets.com/books/1415375471l/119073.jpg","My lovely Sister","https://images.gr-assets.com/books/1415375471l/119073.jpg"))
+
     }
 
 //    private fun loadStories(){

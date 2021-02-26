@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import com.bijaya.bookstore.API.ServiceBuilder
-import com.bijaya.bookstore.db.CustomerDB
 import com.bijaya.bookstore.entity.Customer
 import com.bijaya.bookstore.repository.CustomerRepository
 import com.bijaya1.weekfiveassignmentone.Users.Users
@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var profile:String
     private lateinit var username:String
     private lateinit var password:String
-    private lateinit var linearLayout: LinearLayout
+    private lateinit var constraintLayout: ConstraintLayout
 
 
 
@@ -52,6 +52,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         etPassword=findViewById(R.id.etPassword)
         signupLink=findViewById(R.id.signupLink)
         invalid=findViewById(R.id.invalid)
+        constraintLayout = findViewById(R.id.constraintLayout)
 
         signupLink.setOnClickListener{
             startActivity(Intent(this@LoginActivity, Signup_Activity::class.java))
@@ -116,7 +117,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     withContext(Dispatchers.Main) {
                         val snack =
                                 Snackbar.make(
-                                        linearLayout,
+                                        constraintLayout,
                                         "Invalid credentials",
                                         Snackbar.LENGTH_LONG
                                 )
