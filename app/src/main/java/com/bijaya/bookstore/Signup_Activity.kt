@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.view.View
 import android.widget.*
-import com.bijaya.bookstore.entity.Customer
+import com.bijaya.bookstore.entity.customer
 import com.bijaya.bookstore.repository.CustomerRepository
 import com.bijaya1.weekfiveassignmentone.Users.Users
 import kotlinx.coroutines.CoroutineScope
@@ -56,7 +56,7 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
                 etPassword.requestFocus()
                 return@setOnClickListener
             } else {
-                val customer = Customer(firstname = firstname, lastname = lastname, username = username, password = password)
+                val customer = customer(firstname = firstname, lastname = lastname, username = username, password = password)
 
                 CoroutineScope(Dispatchers.IO).launch {
                     try {
@@ -97,7 +97,7 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
         when (v?.id){
             R.id.btnRegister ->{
                 if (validate()){
-                    val customer = Customer(etFname.text.toString(), etLname.text.toString(), etUsername.text.toString(), etPassword.text.toString())
+                    val customer = customer(etFname.text.toString(), etLname.text.toString(), etUsername.text.toString(), etPassword.text.toString())
                     var intent = Intent();
                     intent.putExtra("user",customer);
                     setResult(Activity.RESULT_OK,intent);
@@ -154,6 +154,6 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
     }
 }
 
-private fun Parcelable.putExtra(s: String, customer: Customer) {
+private fun Parcelable.putExtra(s: String, customer: customer) {
 
 }

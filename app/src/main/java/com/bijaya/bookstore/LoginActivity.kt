@@ -10,13 +10,11 @@ import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import com.bijaya.bookstore.API.ServiceBuilder
-import com.bijaya.bookstore.entity.Customer
 import com.bijaya.bookstore.repository.CustomerRepository
 import com.bijaya1.weekfiveassignmentone.Users.Users
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 

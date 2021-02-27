@@ -1,6 +1,6 @@
 package com.bijaya.bookstore.API
 
-import com.bijaya.bookstore.entity.Customer
+import com.bijaya.bookstore.entity.customer
 import com.bijaya.bookstore.response.LoginResponse
 import retrofit2.Response
 import retrofit2.http.Body
@@ -13,7 +13,7 @@ interface CustomerAPI {
     @POST("/register")
 
     suspend fun registerUser(
-        @Body customer : Customer
+        @Body customer : customer
 
     ): Response<LoginResponse>
 
