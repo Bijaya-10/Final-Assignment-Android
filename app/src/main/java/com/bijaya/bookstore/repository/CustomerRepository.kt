@@ -16,7 +16,7 @@ class CustomerRepository     : MyApiRequest() {
         }
     }
 
-    //login users
+    //login user
 
     suspend fun checkUser(username :String, password : String) : LoginResponse{
         return apiRequest {
