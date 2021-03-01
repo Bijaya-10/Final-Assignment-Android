@@ -70,7 +70,7 @@ class ProductActivity : AppCompatActivity() {
                         withContext(Dispatchers.Main){
                             Toast.makeText(
                                 this@ProductActivity,
-                                "Student Added",
+                                "Product Added",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
