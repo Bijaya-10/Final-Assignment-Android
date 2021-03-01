@@ -46,14 +46,6 @@
 
 
 
-        <EditText
-            android:id="@+id/etbookid"
-            android:layout_width="375dp"
-            android:layout_height="wrap_content"
-            android:hint="Book ID"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            />
 
         <Button
             android:id="@+id/btnsave"

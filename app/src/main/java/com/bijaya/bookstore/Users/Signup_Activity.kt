@@ -45,43 +45,7 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
         loginLink = findViewById(R.id.loginLink)
 
         btnRegister.setOnClickListener{
-            val firstname = etFname.text.toString()
-            val lastname = etLname.text.toString()
-            val username = etUsername.text.toString()
-            val password = etPassword.text.toString()
-            val CPassword = etCPassword.text.toString()
-
-            if (password != CPassword) {
-                etPassword.error = "Password does not match"
-                etPassword.requestFocus()
-                return@setOnClickListener
-            } else {
-                val customer = customer(firstname = firstname, lastname = lastname, username = username, password = password)
-
-                CoroutineScope(Dispatchers.IO).launch {
-                    try {
-                        val customerRepository = CustomerRepository()
-                        val response = customerRepository.registerUser(customer)
-                        if (response.success == true) {
-                            withContext(Main) {
-                                Toast.makeText(
-                                    this@Signup_Activity,
-                                    "Register Successful",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-                        }
-                    }
-                    catch (ex: Exception){
-                        withContext(Main){
-                            Toast.makeText(this@Signup_Activity, ex.toString(), Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                }
-
-                // Api code goes here
-
-            }
+            registerUser()
         }
 
 
@@ -91,6 +55,51 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
         loginLink.setOnClickListener(this)
 
 
+    }
+
+    private fun registerUser() {
+        val firstname = etFname.text.toString()
+        val lastname = etLname.text.toString()
+        val username = etUsername.text.toString()
+        val password = etPassword.text.toString()
+        val CPassword = etCPassword.text.toString()
+
+        if (password != CPassword) {
+            etPassword.error = "Password does not match"
+            etPassword.requestFocus()
+            return
+        } else {
+            val customer1 = customer(
+                firstname = firstname,
+                lastname = lastname,
+                username = username,
+                password = password
+            )
+
+            CoroutineScope(Dispatchers.IO).launch {
+                try {
+                    val customerRepository = CustomerRepository()
+                    val response = customerRepository.registerUser(customer1)
+                    if (response.success == true) {
+                        withContext(Main) {
+                            Toast.makeText(
+                                this@Signup_Activity,
+                                "Register Successful",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                }
+                catch (ex: Exception){
+                    withContext(Main){
+                        Toast.makeText(this@Signup_Activity, ex.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+
+            // Api code goes here
+
+        }
     }
 
     override fun onClick(v: View?) {

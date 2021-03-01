@@ -10,6 +10,7 @@ import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import com.bijaya.bookstore.API.ServiceBuilder
+import com.bijaya.bookstore.ProductActivity
 import com.bijaya.bookstore.repository.CustomerRepository
 import com.bijaya1.weekfiveassignmentone.Users.Users
 import com.google.android.material.snackbar.Snackbar
@@ -27,15 +28,10 @@ class LoginActivity : AppCompatActivity() {
     )
     private var userList = ArrayList<Users>()
     private lateinit var btnLogin: Button
-    private lateinit var btnGetValue: Button
     private lateinit var etUsername: EditText
     private lateinit var etPassword: EditText
     private lateinit var signupLink: TextView
     private lateinit var invalid: TextView
-    private lateinit var currentUser: String
-    private lateinit var profile: String
-    private lateinit var username: String
-    private lateinit var password: String
     private lateinit var constraintLayout: ConstraintLayout
 
 
@@ -104,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
                 val response = repository.checkUser(username, password)
                 if (response.success == true) {
                     ServiceBuilder.token = "Bearer " + response.token
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, ProductActivity::class.java))
                 } else {
                     withContext(Dispatchers.Main) {
                         val snack =

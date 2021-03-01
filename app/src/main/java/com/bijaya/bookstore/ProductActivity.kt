@@ -29,10 +29,9 @@ import java.util.*
 
 class ProductActivity : AppCompatActivity() {
 
-    private lateinit var photo: ImageView
+
     private lateinit var etbookname: EditText
     private lateinit var etbooknumber: EditText
-    private lateinit var etbookid: EditText
     private lateinit var btnsave: Button
     private lateinit var imgProfile: ImageView
 
@@ -43,28 +42,31 @@ class ProductActivity : AppCompatActivity() {
 
         etbookname = findViewById(R.id.etbookname)
         etbooknumber = findViewById(R.id.etbooknumber)
-        etbookid = findViewById(R.id.etbookid)
 
         btnsave = findViewById(R.id.btnsave)
 
         imgProfile = findViewById(R.id.imgProfile)
 
+        imgProfile.setOnClickListener{
+            loadPopUpMenu()
+        }
+
 
         btnsave.setOnClickListener {
             val bookname = etbookname.text.toString()
-            val booknumber = etbooknumber.text.toString().toInt()
-            val bookid = etbookid.text.toString()
+            val booknumber = etbooknumber.text.toString()
 
-            val product = Product(BookName = bookname, BookNumber = booknumber.toString(), BookID = bookid)
+
+            val product = Product(Book_Name = bookname, Book_Number = booknumber)
 
             CoroutineScope(Dispatchers.IO).launch{
                 try{
                     val productRepository = ProductRepository()
-                    val response = productRepository.addProduct(Product())
+                    val response = productRepository.addProduct(product)
                     if (response.success == true){
-                        if (imageUrl != null){
-                            uploadImage(response.data!!._id!!)
-                        }
+//                        if (imageUrl != null){
+//                            uploadImage(response.data!!._id!!)
+//                        }
                         withContext(Dispatchers.Main){
                             Toast.makeText(
                                 this@ProductActivity,

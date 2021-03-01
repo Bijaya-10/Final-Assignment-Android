@@ -44,9 +44,9 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: ProductAdapter.StudentViewHolder, position: Int) {
         val product = lstStudent[position]
-        holder.tvbookname.text = product.BookName
-        holder.tvbooknumber.text = product.BookNumber.toString()
-        holder.tvbookid.text = product.BookID
+        holder.tvbookname.text = product.Book_Name
+        holder.tvbooknumber.text = product.Book_Number
+
 
 
 //        holder.edit.setOnClickListener {
@@ -56,8 +56,8 @@ class ProductAdapter(
 //        }
 
         holder.delete.setOnClickListener {
-            val imagePath = ServiceBuilder.loadImagePath() + product.photo
-            if (!product.photo.equals("no-photo.jpg")) {
+            val imagePath = ServiceBuilder.loadImagePath() + product.Book_Image
+            if (!product.Book_Image.equals("no-photo.jpg")) {
                 Glide.with(context)
                     .load(imagePath)
                     .fitCenter()
@@ -66,7 +66,7 @@ class ProductAdapter(
 
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Delete Student")
-            builder.setMessage("Are You Sure You Want To Delete  ${product.BookName} ?")
+            builder.setMessage("Are You Sure You Want To Delete  ${product.Book_Name} ?")
             builder.setIcon(android.R.drawable.ic_dialog_alert)
             builder.setPositiveButton("Yes") { _, _ ->
 
