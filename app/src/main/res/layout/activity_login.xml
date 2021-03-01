@@ -11,7 +11,6 @@
     tools:context=".LoginActivity">
 
 
-
     <TextView
         android:id="@+id/tvHeading"
         android:layout_width="wrap_content"
