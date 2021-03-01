@@ -29,16 +29,13 @@ class ProductAdapter(
         val imgProfile: ImageView = view.findViewById(R.id.imgProfile)
         val tvbookname: TextView = view.findViewById(R.id.tvbookname)
         val tvbooknumber: TextView = view.findViewById(R.id.tvbooknumber)
-        val tvbookid: TextView = view.findViewById(R.id.tvbookid)
         val delete: ImageView = view.findViewById(R.id.delete)
         val edit: ImageView = view.findViewById(R.id.edit)
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.viewproduct, parent, false)
+            .inflate(R.layout.activity_view_product, parent, false)
         return StudentViewHolder(view)
     }
 

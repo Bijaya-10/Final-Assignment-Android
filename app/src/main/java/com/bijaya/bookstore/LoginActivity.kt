@@ -100,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
                 val response = repository.checkUser(username, password)
                 if (response.success == true) {
                     ServiceBuilder.token = "Bearer " + response.token
-                    startActivity(Intent(this@LoginActivity, ProductActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                 } else {
                     withContext(Dispatchers.Main) {
                         val snack =
@@ -186,12 +186,11 @@ class LoginActivity : AppCompatActivity() {
             return false
         }
         if (etPassword.text.toString() == "") {
-            if (etUsername.text.toString() == "") {
-                etUsername.error = "Please Enter Username"
+            if (etPassword.text.toString() == "") {
+                etPassword.error = "Please Enter Password"
                 return false
             }
-            etPassword.error = "Please Enter Password"
-            return false
+
         }
         return true
     }
