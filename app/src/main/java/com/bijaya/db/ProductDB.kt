@@ -1,4 +1,37 @@
 package com.bijaya.db
 
-class ProductDB {
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.bijaya.bookstore.entity.Product
+
+@Database(
+    entities = [(Product::class)],
+    version = 1
+)
+
+abstract class ProductDB  : RoomDatabase() {
+    abstract fun getUserDao(): ProductDAO
+
+    companion object {
+        @Volatile
+        private var instance: ProductDB? = null
+
+        fun getInstance(context: Context): ProductDB {
+            if (instance == null) {
+                synchronized(ProductDB::class) {
+                    instance = buildDatabase(context)
+                }
+            }
+            return instance!!
+        }
+
+        private fun buildDatabase(context: Context) =
+            Room.databaseBuilder(
+                context.applicationContext,
+                ProductDB::class.java,
+                "StudentDB"
+            ).build()
+    }
 }
