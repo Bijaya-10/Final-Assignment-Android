@@ -2,42 +2,90 @@ package com.bijaya1.weekfiveassignmentone
 
 import android.app.Activity
 import android.content.Intent
+import android.icu.text.CaseMap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TableLayout
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.bijaya.bookstore.ProductActivity
+import com.bijaya.bookstore.adapter.ViewPagerAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.bijaya1.weekfiveassignmentone.Users.Post
 import com.bijaya1.weekfiveassignmentone.Users.Users
 import com.bijaya1.weekfiveassignmentone.adapter.PostAdapter
 import com.bijaya1.weekfiveassignmentone.adapter.UserAdapter
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity(){
 
-    private var userList = arrayListOf<Users>()
-    private var postList = ArrayList<Post>()
-    private lateinit var stories: RecyclerView
-    private lateinit var feed: RecyclerView
-    private lateinit var addPost: FloatingActionButton
-    private lateinit var search: EditText
-    private lateinit var currentUser: String
-    private lateinit var profile: String
-    private lateinit var btnLogin: Button
-
-    private lateinit var btnSave:Button
+    private lateinit var lstTitle: ArrayList<String>
+    private lateinit var lstFragments: ArrayList<Fragment>
+    private lateinit var viewPager: ViewPager2
+    private  lateinit var tableLayout: TableLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btnSave=findViewById(R.id.btnsave)
-        btnSave.setOnClickListener{
-            startActivity(Intent(this@MainActivity,ProductActivity::class.java))
-        }
+        viewPager = findViewById(R.id.viewpager)
+        tableLayout = findViewById(R.id.tablayout)
+
+        populatelist()
+        val adapter = ViewPagerAdapter(lstFragments,supportFragmentManager,lifecycle)
+        viewPager.adapter = adapter
+        TabLayoutMediator(tableLayout,viewPager){
+            tab, Position ->
+            tab.text = lstTitle[Position]
+
+        }.attach()
+    }
+
+    private fun populatelist(){
+        lstTitle = ArrayList<String>()
+        lstTitle.add("Sum")
+        lstTitle.add("Area of circle")
+        lstFragments = ArrayList<Fragment>()
+        lstFragments.add(SumFragment())
+        lstFragments.add(AreaFragment())
+
+
+
+    }
+}
+
+
+
+
+
+//    private var userList = arrayListOf<Users>()
+//    private var postList = ArrayList<Post>()
+//    private lateinit var stories: RecyclerView
+//    private lateinit var feed: RecyclerView
+
+
+//    private lateinit var addPost: FloatingActionButton
+//    private lateinit var search: EditText
+//    private lateinit var currentUser: String
+//    private lateinit var profile: String
+//    private lateinit var btnLogin: Button
+
+
+
+//    private lateinit var btnSave:Button
+//
+
+//        btnSave=findViewById(R.id.btnsave)
+//        btnSave.setOnClickListener{
+//            startActivity(Intent(this@MainActivity,ProductActivity::class.java))
+//        }
 
 
 
@@ -102,5 +150,3 @@ class MainActivity : AppCompatActivity(){
 //            }
 //        }
 //    }
-}
-}
