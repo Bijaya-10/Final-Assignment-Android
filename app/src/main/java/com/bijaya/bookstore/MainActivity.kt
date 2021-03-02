@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
+import com.bijaya.bookstore.Fragments.AboutFragment
+import com.bijaya.bookstore.Fragments.HomeFragment
 import com.bijaya.bookstore.ProductActivity
 import com.bijaya.bookstore.adapter.ViewPagerAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -24,42 +26,72 @@ import com.bijaya1.weekfiveassignmentone.adapter.UserAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class MainActivity : AppCompatActivity(){
-
-    private lateinit var lstTitle: ArrayList<String>
-    private lateinit var lstFragments: ArrayList<Fragment>
-    private lateinit var viewPager: ViewPager2
-    private  lateinit var tableLayout: TableLayout
-
+class MainActivity : AppCompatActivity() {
+        private lateinit var btnhomefragment: Button
+    private lateinit var btnaboutfragment: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        viewPager = findViewById(R.id.viewpager)
-        tableLayout = findViewById(R.id.tablayout)
+        btnhomefragment = findViewById(R.id.btnhome)
+        btnaboutfragment = findViewById(R.id.btnabout)
 
-        populatelist()
-        val adapter = ViewPagerAdapter(lstFragments,supportFragmentManager,lifecycle)
-        viewPager.adapter = adapter
-        TabLayoutMediator(tableLayout,viewPager){
-            tab, Position ->
-            tab.text = lstTitle[Position]
-
-        }.attach()
-    }
-
-    private fun populatelist(){
-        lstTitle = ArrayList<String>()
-        lstTitle.add("Sum")
-        lstTitle.add("Area of circle")
-        lstFragments = ArrayList<Fragment>()
-        lstFragments.add(SumFragment())
-        lstFragments.add(AreaFragment())
-
-
-
+btnhomefragment.setOnClickListener{
+    supportFragmentManager.beginTransaction().apply {
+        replace(R.id.linearcontainer, HomeFragment())
+        addToBackStack(null)
+        commit()
     }
 }
+
+        btnaboutfragment.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.linearcontainer, AboutFragment())
+                addToBackStack(null)
+                commit()
+        }
+        }
+    }
+}
+
+
+
+
+
+//    private lateinit var lstTitle: ArrayList<String>
+//    private lateinit var lstFragments: ArrayList<Fragment>
+//    private lateinit var viewPager: ViewPager2
+//    private  lateinit var tableLayout: TableLayout
+//
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_main)
+//        viewPager = findViewById(R.id.viewpager)
+//        tableLayout = findViewById(R.id.tablayout)
+//
+//        populatelist()
+//        val adapter = ViewPagerAdapter(lstFragments,supportFragmentManager,lifecycle)
+//        viewPager.adapter = adapter
+//        TabLayoutMediator(tableLayout,viewPager){
+//            tab, Position ->
+//            tab.text = lstTitle[Position]
+//
+//        }.attach()
+//    }
+//
+//    private fun populatelist(){
+//        lstTitle = ArrayList<String>()
+//        lstTitle.add("Sum")
+//        lstTitle.add("Area of circle")
+//        lstFragments = ArrayList<Fragment>()
+//        lstFragments.add(HomeFragment())
+//        lstFragments.add(AboutFragment())
+//
+//
+//
+//    }
+
 
 
 

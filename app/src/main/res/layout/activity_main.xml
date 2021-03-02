@@ -10,16 +10,46 @@
     android:background="#EFEEEE"
     tools:context=".MainActivity">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
 
+
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/btnhome"
+            android:layout_weight="1"
+            android:text="Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:id="@+id/btnabout"
+            android:text="About"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:id="@+id/btncontact"
+            android:text="About"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/parent"
+        app:layout_constraintEnd_toStartOf="@+id/parent"
+        tools:ignore="UnknownId" />
 
 
 

@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeekFiveAssignmentOne"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.bijaya.bookstore.ViewProduct"></activity>
+        <activity android:name="com.bijaya.bookstore.TabActivity"></activity>
+        <activity android:name="com.bijaya.bookstore.ViewProduct" />
         <activity android:name="com.bijaya.bookstore.BookDetails" />
         <activity android:name="com.bijaya.bookstore.ProductActivity" />
         <activity android:name="com.bijaya.bookstore.Users.StaffActivity" />
