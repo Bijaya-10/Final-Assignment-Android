@@ -1,33 +1,116 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="10dp"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#EFEEEE"
     tools:context="com.bijaya.bookstore.Fragments.ContactFragment">
 
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="      Contact Us"
+    android:paddingTop="6sp"
+    android:textSize="50sp"
+    android:background="@drawable/background"/>
 
 
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="55sp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/call"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
+        />
+
+<!--    <ImageView-->
+<!--        android:layout_width="50sp"-->
+<!--        android:layout_height="55sp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:background="@drawable/call"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginStart="40dp"/>-->
+
+
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="55sp"
+        android:layout_marginLeft="47dp"
+        android:background="@drawable/message"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="30dp" />
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="55sp"
+        android:layout_marginLeft="47dp"
+        android:background="@drawable/message"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="30dp" />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to contact us page"
+        android:text="9860848209"
         android:textSize="40sp"
-        android:paddingTop="29dp"
-        android:layout_gravity="center_vertical"
+        android:paddingTop="0dp"
+        android:layout_centerVertical="true"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-black"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="014319022"
+        android:textSize="40sp"
+        android:paddingTop="380dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile"
+        android:textSize="30sp"
+        android:paddingTop="100sp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telephone"
+        android:textSize="30sp"
+        android:paddingTop="500sp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:layout_centerHorizontal="true"
         />
 
 
 
-
-
-
-
-
-
-
-
-</LinearLayout>
+</RelativeLayout>

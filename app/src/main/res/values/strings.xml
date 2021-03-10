@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Bookstore Management System</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc1">J.K. Rowling is the British author, \nclose who created the popular and critically acclaimed Harry Potter series (seven books published between 1997 and 2007), about a lonely orphan who discovers that he is actually a wizard and enrolls in the Hogwarts School of Witchcraft and Wizardry.</string>
+    <string name="hello_blank_fragment">hello_blank_fragment</string>
+
+
 </resources>
