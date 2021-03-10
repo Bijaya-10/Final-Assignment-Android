@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.bijaya.bookstore.Fragments.AboutFragment
+import com.bijaya.bookstore.Fragments.ContactFragment
 import com.bijaya.bookstore.Fragments.HomeFragment
 import com.bijaya.bookstore.ProductActivity
 import com.bijaya.bookstore.adapter.ViewPagerAdapter
@@ -29,12 +30,14 @@ import com.google.android.material.tabs.TabLayoutMediator
 class MainActivity : AppCompatActivity() {
         private lateinit var btnhomefragment: Button
     private lateinit var btnaboutfragment: Button
+    private lateinit var btncontactfragment: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnhomefragment = findViewById(R.id.btnhome)
         btnaboutfragment = findViewById(R.id.btnabout)
+        btncontactfragment = findViewById(R.id.btncontact)
 
 btnhomefragment.setOnClickListener{
     supportFragmentManager.beginTransaction().apply {
@@ -50,6 +53,15 @@ btnhomefragment.setOnClickListener{
                 addToBackStack(null)
                 commit()
         }
+        }
+
+
+        btncontactfragment.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.linearcontainer, ContactFragment())
+                addToBackStack(null)
+                commit()
+            }
         }
     }
 }

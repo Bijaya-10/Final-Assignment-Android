@@ -1,13 +1,268 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.bijaya.bookstore.Fragments.HomeFragment">
+
+
+
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Welcome to Home Page" />
+        android:text="Welcome to the Bookstore"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp">
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:background="@drawable/background"
+                android:padding="3dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harry Potter"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="40sp"
+                        android:layout_marginLeft="1dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Harry Potter is one of the most popular book written by J.K Rowling."
+                        android:textSize="20dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:padding="8dp"
+                    android:layout_marginTop="-100dp"
+                    android:layout_marginLeft="310dp"
+                    android:src="@drawable/harrypotter"/>
+
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:background="@drawable/background"
+                android:padding="3dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I'm a different butterfly"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="40sp"
+                        android:layout_marginLeft="1dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="This story is written by Sherri O."
+                        android:textSize="20dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:padding="8dp"
+                    android:layout_marginTop="-130dp"
+                    android:layout_marginLeft="310dp"
+                    android:src="@drawable/butterfly"/>
+
+
+
+
+            </LinearLayout> <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/background"
+            android:padding="3dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I'm a different butterfly"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="40sp"
+                    android:layout_marginLeft="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="This story is written by Sherri O."
+                    android:textSize="20dp"/>
+
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:padding="8dp"
+                android:layout_marginTop="-130dp"
+                android:layout_marginLeft="310dp"
+                android:src="@drawable/butterfly"/>
+
+
+
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:background="@drawable/background"
+                android:padding="3dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Different Sun"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="40sp"
+                        android:layout_marginLeft="1dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Harry Potter is one of the most popular book written by J.K Rowling."
+                        android:textSize="20dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:padding="8dp"
+                    android:layout_marginTop="-100dp"
+                    android:layout_marginLeft="310dp"
+                    android:src="@drawable/differentsun"/>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:background="@drawable/background"
+                android:padding="3dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The Storyof ferdinand"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="40sp"
+                        android:layout_marginLeft="1dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Harry Potter is one of the most popular book written by J.K Rowling."
+                        android:textSize="20dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:padding="8dp"
+                    android:layout_marginTop="-100dp"
+                    android:layout_marginLeft="310dp"
+                    android:src="@drawable/ferdinand"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -6,6 +6,7 @@ import android.widget.TableLayout
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.bijaya.bookstore.Fragments.AboutFragment
+import com.bijaya.bookstore.Fragments.ContactFragment
 import com.bijaya.bookstore.Fragments.HomeFragment
 import com.bijaya.bookstore.adapter.ViewPagerAdapter
 import com.bijaya1.weekfiveassignmentone.R
@@ -37,9 +38,11 @@ class TabActivity : AppCompatActivity() {
     private fun populateList() {
         lstTitle = ArrayList<String>()
         lstTitle.add("Home")
-        lstTitle.add("About")
+        lstTitle.add("AboutUs")
+        lstTitle.add("Contact")
         lstFragments = ArrayList<Fragment>()
         lstFragments.add(HomeFragment())
         lstFragments.add(AboutFragment())
+        lstFragments.add(ContactFragment())
     }
 }

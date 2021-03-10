@@ -29,14 +29,14 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:id="@+id/btnabout"
-            android:text="About"
+            android:text="About Us"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <Button
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:id="@+id/btncontact"
-            android:text="About"
+            android:text="Contact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

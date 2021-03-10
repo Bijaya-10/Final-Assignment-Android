@@ -1,13 +1,33 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.bijaya.bookstore.Fragments.ContactFragment">
+
+
+
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to contact us page"
+        android:textSize="40sp"
+        android:paddingTop="29dp"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        />
 
-</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
