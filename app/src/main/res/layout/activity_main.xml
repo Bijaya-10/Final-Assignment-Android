@@ -101,7 +101,7 @@
                     android:layout_width="140dp"
                     android:layout_height="200dp"
                     android:maxHeight="100dp"
-                    android:src="@drawable/harrypotter"
+                    android:src="@drawable/i4"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="-10dp"
                     />
@@ -214,7 +214,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ferdinand"
+                    android:text="Story Thieves"
                     android:textSize="30dp"
                     android:layout_marginTop="1dp"
                     android:fontFamily="sans-serif-black"/>
@@ -223,7 +223,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:text="This Book is written by J.K Rowling, \nclose J.K. Rowling is the British \nclose author who created the \nclose popular and critically \nclose acclaimed Harry Potter \nclose series (seven books published between 1997 and 2007)"
+                    android:text="@string/desc4"
                     android:textSize="20dp"
                     android:fontFamily="sans-serif"
                     />
@@ -233,7 +233,7 @@
                     android:layout_height="200dp"
                     android:maxHeight="100dp"
                     android:layout_marginRight="-30dp"
-                    android:src="@drawable/ferdinand"
+                    android:src="@drawable/i5"
                     android:layout_alignParentRight="true"
                     />
 
@@ -241,6 +241,106 @@
 
 
         </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="@drawable/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Owl Babies"
+                    android:textSize="30dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="sans-serif-black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/desc5"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif"
+                    />
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="250dp"
+                    android:maxHeight="100dp"
+                    android:layout_marginRight="-30dp"
+                    android:src="@drawable/i7"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="@drawable/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="One Indian Girl"
+                    android:textSize="30dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="sans-serif-black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/desc6"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif"
+                    />
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="250dp"
+                    android:maxHeight="100dp"
+                    android:layout_marginRight="-30dp"
+                    android:src="@drawable/i8"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
 
     </LinearLayout>
 </ScrollView>

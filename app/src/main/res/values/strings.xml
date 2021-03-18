@@ -25,7 +25,8 @@
     </string>
 
 
-    Ferdinand is a 2017 American computer-animated comedy adventure film produced by Blue Sky Studios and distributed by 20th Century Fox.
+    Ferdinand is a 2017 American computer-animated comedy adventure film produced by Blue Sky
+    Studios and distributed by 20th Century Fox.
 
     <string name="desc3">
 
@@ -41,45 +42,34 @@
     <string name="desc4">
 
 
-        <br>J.K.Rowling is the British author\n</br>
-        <br>who created the popular and\n</br>
-        <br>critically acclaimed Harry \n</br>
-        <br>Potter series (seven \n</br>
-        <br>books published between 1997\n</br> and 2007)
+        <br>by James Riley\n</br>
+
+        <br>December 15, 2015\n</br>
+
     </string>
-
-
 
 
     <string name="desc5">
 
 
-        <br>J.K.Rowling is the British author\n</br>
-        <br>who created the popular and\n</br>
-        <br>critically acclaimed Harry \n</br>
-        <br>Potter series (seven \n</br>
-        <br>books published between 1997\n</br> and 2007)
+        <br>Originally published: 1992\n</br>
+        <br>Author: Martin Waddell\n</br>
+        <br>Page count: 32\n</br>
+        <br>POriginal language: English\n</br>
+        <br>Genres: Childrens literature\n</br>)
+        <br>Picture book, Fiction\n</br>)
     </string>
-
 
 
     <string name="desc6">
 
 
-        <br>J.K.Rowling is the British author\n</br>
-        <br>who created the popular and\n</br>
-        <br>critically acclaimed Harry \n</br>
-        <br>Potter series (seven \n</br>
-        <br>books published between 1997\n</br> and 2007)
+        <br>Publisher: Rupa and Co.\n</br>
+        <br>Author: Chetan Bhagat\n</br>
+        <br>Genre: Fiction\n</br>
+        <br>Pages: 280\n</br>
+
     </string>
-
-
-
-
-
-
-
-
 
 
     <string name="hello_blank_fragment">hello_blank_fragment</string>

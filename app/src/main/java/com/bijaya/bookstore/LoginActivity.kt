@@ -11,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import com.bijaya.bookstore.API.ServiceBuilder
 import com.bijaya.bookstore.ProductActivity
+import com.bijaya.bookstore.grid
 import com.bijaya.bookstore.repository.CustomerRepository
 import com.bijaya1.weekfiveassignmentone.Users.Users
 import com.google.android.material.snackbar.Snackbar
@@ -100,7 +101,7 @@ class LoginActivity : AppCompatActivity() {
                 val response = repository.checkUser(username, password)
                 if (response.success == true) {
                     ServiceBuilder.token = "Bearer " + response.token
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, grid::class.java))
                 } else {
                     withContext(Dispatchers.Main) {
                         val snack =

@@ -65,7 +65,7 @@
                     android:layout_width="150dp"
                     android:layout_height="200dp"
                     android:maxHeight="100dp"
-                    android:src="@drawable/harrypotter"
+                    android:src="@drawable/i4"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="-30dp"
                     />
