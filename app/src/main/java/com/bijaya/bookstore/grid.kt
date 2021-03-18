@@ -19,17 +19,29 @@ var modelList = ArrayList<Model>(
 
     var names = arrayOf(
 
-            "i5",
-            "i7",
-            "i8",
-        "i4"
+            "Book 1",
+            "Book 2",
+            "Book 3",
+            "Book 4",
+        "Book 5",
+        "Book 6",
+        "Book 7",
+        "Book 8"
 
     )
     var images = intArrayOf(
         R.drawable.i4,
         R.drawable.i5,
         R.drawable.i7,
-        R.drawable.i8
+        R.drawable.i8,
+                R.drawable.i10,
+                R.drawable.i11,
+                R.drawable.i12,
+                R.drawable.i13,
+                R.drawable.i14,
+                R.drawable.i15,
+                R.drawable.i16
+
     )
 
 
