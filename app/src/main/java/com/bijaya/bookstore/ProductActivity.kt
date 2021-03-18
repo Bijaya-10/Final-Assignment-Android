@@ -47,7 +47,7 @@ class ProductActivity : AppCompatActivity() {
 
         imgProfile = findViewById(R.id.imgProfile)
 
-        imgProfile.setOnClickListener{
+        imgProfile.setOnClickListener {
             loadPopUpMenu()
         }
 
@@ -59,15 +59,16 @@ class ProductActivity : AppCompatActivity() {
 
             val product = Product(Book_Name = bookname, Book_Number = booknumber)
 
-            CoroutineScope(Dispatchers.IO).launch{
-                try{
+            CoroutineScope(Dispatchers.IO).launch {
+                try {
                     val productRepository = ProductRepository()
                     val response = productRepository.addProduct(product)
-                    if (response.success == true){
+                    if (response.success == true) {
 //                        if (imageUrl != null){
 //                            uploadImage(response.data!!._id!!)
 //                        }
-                        withContext(Dispatchers.Main){
+                        withContext(Dispatchers.Main) {
+
                             Toast.makeText(
                                 this@ProductActivity,
 
@@ -75,20 +76,24 @@ class ProductActivity : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
+
+                        startActivity(Intent(this@ProductActivity, ViewProduct::class.java));
                     }
-                }
-                catch (ex: Exception){
-                    withContext(Dispatchers.Main){
-                        Toast.makeText(this@ProductActivity,
+                } catch (ex: Exception) {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(
+                            this@ProductActivity,
                             ex.toString(),
-                            Toast.LENGTH_SHORT)
+                            Toast.LENGTH_SHORT
+                        )
                             .show()
                     }
                 }
             }
         }
 
-        }
+    }
+
     private fun uploadImage(studentId: String) {
         if (imageUrl != null) {
             val file = File(imageUrl!!)
@@ -142,7 +147,8 @@ class ProductActivity : AppCompatActivity() {
                 val selectedImage = data.data
                 val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
                 val contentResolver = contentResolver
-                val cursor = contentResolver.query(selectedImage!!, filePathColumn, null, null, null)
+                val cursor =
+                    contentResolver.query(selectedImage!!, filePathColumn, null, null, null)
                 cursor!!.moveToFirst()
                 val columnIndex = cursor.getColumnIndex(filePathColumn[0])
                 imageUrl = cursor.getString(columnIndex)
@@ -157,6 +163,7 @@ class ProductActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun bitmapToFile(
         bitmap: Bitmap,
         fileNameToSave: String
@@ -183,6 +190,7 @@ class ProductActivity : AppCompatActivity() {
             file // it will return null
         }
     }
+
     private var REQUEST_GALLERY_CODE = 0
     private var REQUEST_CAMERA_CODE = 1
     private var imageUrl: String? = null
@@ -199,6 +207,6 @@ class ProductActivity : AppCompatActivity() {
     }
 
 
-    }
+}
 
 

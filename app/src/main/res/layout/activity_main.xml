@@ -71,7 +71,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="400dp"
             android:layout_height="200dp"
-            app:cardCornerRadius="15dp"
+            app:cardCornerRadius="55dp"
             android:layout_marginTop="20dp">
 
             <RelativeLayout
@@ -98,12 +98,12 @@
                     />
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="140dp"
                     android:layout_height="200dp"
                     android:maxHeight="100dp"
                     android:src="@drawable/harrypotter"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="-30dp"
+                    android:layout_marginRight="-10dp"
                     />
 
             </RelativeLayout>
@@ -135,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:text="This Book is written by J.K Rowling, \nclose J.K. Rowling is the British \nclose author who created the \nclose popular and critically \nclose acclaimed Harry Potter \nclose series (seven books published between 1997 and 2007)"
+                    android:text="@string/desc2"
                     android:textSize="20dp"
                     android:fontFamily="sans-serif"
                     />
@@ -153,6 +153,51 @@
 
 
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="@drawable/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ferdinand"
+                    android:textSize="30dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="sans-serif-black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/desc3"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif"
+                    />
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="220dp"
+                    android:maxHeight="140dp"
+                    android:layout_marginRight="-30dp"
+                    android:src="@drawable/ferdinand"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

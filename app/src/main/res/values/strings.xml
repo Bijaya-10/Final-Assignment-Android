@@ -1,7 +1,87 @@
 <resources>
     <string name="app_name">Bookstore Management System</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="desc1">J.K. Rowling is the British author, \nclose who created the popular and critically acclaimed Harry Potter series (seven books published between 1997 and 2007), about a lonely orphan who discovers that he is actually a wizard and enrolls in the Hogwarts School of Witchcraft and Wizardry.</string>
+    <string name="desc1">
+
+
+        <br>J.K.Rowling is the British author\n</br>
+        <br>who created the popular and\n</br>
+        <br>critically acclaimed Harry \n</br>
+        <br>Potter series (seven \n</br>
+        <br>books published between 1997\n</br> and 2007)
+    </string>
+
+    <string name="desc2">
+
+
+        <br>A Chinese family moves\n</br>
+        <br> from their native land\n</br>
+        <br> to a town in Germanyande\n</br>
+        <br> struggles to adjust\n</br>
+        <br> to the different culture\n</br> and 2007)
+        <br>Marriage hangs\n</br>
+         <br>in the balance\n</br>
+
+    </string>
+
+
+    Ferdinand is a 2017 American computer-animated comedy adventure film produced by Blue Sky Studios and distributed by 20th Century Fox.
+
+    <string name="desc3">
+
+
+        <br>Ferdinand is a 2017 American\n</br>
+        <br>computer-animated comedy\n</br>
+        <br>adventure film produced by\n</br>
+        <br>Blue Sky Studios and\n</br>
+        <br>distributed by 20th Century Fox.\n</br>
+    </string>
+
+
+    <string name="desc4">
+
+
+        <br>J.K.Rowling is the British author\n</br>
+        <br>who created the popular and\n</br>
+        <br>critically acclaimed Harry \n</br>
+        <br>Potter series (seven \n</br>
+        <br>books published between 1997\n</br> and 2007)
+    </string>
+
+
+
+
+    <string name="desc5">
+
+
+        <br>J.K.Rowling is the British author\n</br>
+        <br>who created the popular and\n</br>
+        <br>critically acclaimed Harry \n</br>
+        <br>Potter series (seven \n</br>
+        <br>books published between 1997\n</br> and 2007)
+    </string>
+
+
+
+    <string name="desc6">
+
+
+        <br>J.K.Rowling is the British author\n</br>
+        <br>who created the popular and\n</br>
+        <br>critically acclaimed Harry \n</br>
+        <br>Potter series (seven \n</br>
+        <br>books published between 1997\n</br> and 2007)
+    </string>
+
+
+
+
+
+
+
+
+
+
     <string name="hello_blank_fragment">hello_blank_fragment</string>
 
 

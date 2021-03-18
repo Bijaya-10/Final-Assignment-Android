@@ -4,15 +4,14 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
+data class Product(
 
-data class Product (
-
-    val _id :String? = null,
-    val Book_Name :String? = null,
-    val Book_Number :String? = null,
-    val Book_Image : String? = null
-    )
-//{
-//    @PrimaryKey(autoGenerate = true)
-//    var productId:Int? = null;
-//}
+    val _id: String? = null,
+    val Book_Name: String? = null,
+    val Book_Number: String? = null,
+    val Book_Image: String? = null
+)
+{
+    @PrimaryKey(autoGenerate = true)
+    var productId:Int? = null;
+}

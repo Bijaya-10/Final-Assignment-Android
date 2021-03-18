@@ -1,67 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/background"
+    android:layout_height="match_parent"
     android:layout_margin="5dp"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    tools:context="com.bijaya.bookstore.ViewProduct">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_weight="2"
-        android:orientation="vertical"
-        android:layout_marginLeft="15dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/tvbookname"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center_vertical"
-            android:text="Book Name"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:id="@+id/tvbooknumber"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="Book Number"
-            android:gravity="center_vertical"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@+id/tvbookid"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center_vertical"
-            android:text="Book ID"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/edit"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:src="@drawable/edit"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/delete"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:src="@drawable/ic_baseline_delete_24"
-            android:layout_weight="1"/>
-    </LinearLayout>
 
 </LinearLayout>

@@ -5,9 +5,10 @@ import androidx.room.*
 import com.bijaya.bookstore.dao.ProductDAO
 import com.bijaya.bookstore.entity.Product
 
-@Dao
+@Database(entities = ([Product::class]), version = 1, exportSchema = false)
 abstract class ProductDB : RoomDatabase() {
-    abstract fun getUserDao(): ProductDAO
+    //    abstract fun getUserDao(): ProductDAO
+    abstract fun getProductDao(): ProductDAO;
 
 
     companion object {
@@ -27,8 +28,9 @@ abstract class ProductDB : RoomDatabase() {
             Room.databaseBuilder(
                 context.applicationContext,
                 ProductDB::class.java,
-                "StudentDB"
-            ).build()
+                "ProductDB"
+            ).fallbackToDestructiveMigration()
+                .build()
 
     }
 }
