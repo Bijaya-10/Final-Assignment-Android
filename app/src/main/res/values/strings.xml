@@ -71,6 +71,14 @@
 
     </string>
 
+    <string name = "desc7">
+        Are you looking for Bookstore management system for your final year project? We are here to help you. You can contact us This application based on Internet that aims to all the levels of management providing information of an organization. This system can be used as an information management system for the Bookstore. Final Year Project Help for Computer Science Where people can order the books which they want and even they do not need to bother about the location and do not worry about picking it up from the store. This system will help you to get the book from the store to your home just by a single click. We can also make the payment after delivery of the book which will make us feel safe regarding our money. The main menu will contain six parts which are as follows:
+        Member Login
+        Admin login
+        About us
+        Contact us
+    </string>
+
 
     <string name="hello_blank_fragment">hello_blank_fragment</string>
 

@@ -19,6 +19,7 @@ import com.bijaya.bookstore.Fragments.ContactFragment
 import com.bijaya.bookstore.Fragments.HomeFragment
 import com.bijaya.bookstore.ProductActivity
 import com.bijaya.bookstore.adapter.ViewPagerAdapter
+import com.bijaya.bookstore.grid
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.bijaya1.weekfiveassignmentone.Users.Post
 import com.bijaya1.weekfiveassignmentone.Users.Users
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         private lateinit var btnhomefragment: Button
     private lateinit var btnaboutfragment: Button
     private lateinit var btncontactfragment: Button
+    private lateinit var btnread:Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         btnhomefragment = findViewById(R.id.btnhome)
         btnaboutfragment = findViewById(R.id.btnabout)
         btncontactfragment = findViewById(R.id.btncontact)
+        btnread = findViewById(R.id.btnread)
+
 
 btnhomefragment.setOnClickListener{
     supportFragmentManager.beginTransaction().apply {
@@ -63,6 +68,14 @@ btnhomefragment.setOnClickListener{
                 commit()
             }
         }
+
+
+        btnread.setOnClickListener {
+            val intent = Intent(this, grid::class.java)
+          startActivity(intent)
+        }
+
+
     }
 }
 

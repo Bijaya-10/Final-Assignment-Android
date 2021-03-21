@@ -1,6 +1,7 @@
 package com.bijaya.bookstore
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.bijaya1.weekfiveassignmentone.R
+import kotlin.math.log
 
 class grid : AppCompatActivity() {
-
+    private lateinit var btncrud: Button
 var modelList = ArrayList<Model>(
 
 
@@ -19,17 +21,18 @@ var modelList = ArrayList<Model>(
 
     var names = arrayOf(
 
-            "Book 1",
-            "Book 2",
-            "Book 3",
-            "Book 4",
-        "Book 5",
-        "Book 6",
-        "Book 7",
-        "Book 8"
+            "Harry Potter",
+            "Story Thieves",
+            "Owl Babies",
+            "One Indian Girl",
+        "Story Of My Life",
+        "Collector of names",
+        "Pirate Tale",
+        "Charlotte's Web"
 
     )
     var images = intArrayOf(
+
         R.drawable.i4,
         R.drawable.i5,
         R.drawable.i7,
@@ -40,7 +43,16 @@ var modelList = ArrayList<Model>(
                 R.drawable.i13,
                 R.drawable.i14,
                 R.drawable.i15,
-                R.drawable.i16
+                R.drawable.i16,
+
+
+        R.drawable.i17,
+        R.drawable.i18,
+        R.drawable.i19,
+        R.drawable.i20,
+        R.drawable.i21,
+        R.drawable.i22
+
 
     )
 
@@ -49,6 +61,9 @@ var modelList = ArrayList<Model>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grid)
+
+
+        btncrud = findViewById(R.id.btncrud)
 
         for(i in names.indices){
             modelList.add(Model(names[i],images[i]))
@@ -60,14 +75,18 @@ var modelList = ArrayList<Model>(
         gridView.adapter = customAdapter;
 
 
-
-
+        btncrud.setOnClickListener {
+            val intent = Intent(this, ProductActivity::class.java)
+            startActivity(intent);
+        }
     }
+
 
     class CustomAdapter(
         var itemModel: ArrayList<Model>,
                 var context: Context
     ): BaseAdapter(){
+
 
         var LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         override fun getView(position: Int, view: View?, viewGroup: ViewGroup?): View {
@@ -87,6 +106,7 @@ var modelList = ArrayList<Model>(
 
         override fun getCount(): Int {
            return itemModel.size
+
         }
 
         override fun getItem(position: Int): Any {
@@ -101,4 +121,5 @@ var modelList = ArrayList<Model>(
 
 
     }
+
 }

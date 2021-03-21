@@ -8,11 +8,30 @@
     tools:context="com.bijaya.bookstore.grid">
 
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/desc7"/>
+
     <GridView
         android:id="@+id/gridView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:numColumns="2"/>
+
+
+
+    <Button
+        android:id="@+id/btncrud"
+        android:layout_width="375sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#2196F3"
+        android:text="Book Updates"
+        android:textSize="20sp" />
+
 
 
 </LinearLayout>

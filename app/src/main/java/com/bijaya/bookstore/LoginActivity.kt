@@ -101,7 +101,7 @@ class LoginActivity : AppCompatActivity() {
                 val response = repository.checkUser(username, password)
                 if (response.success == true) {
                     ServiceBuilder.token = "Bearer " + response.token
-                    startActivity(Intent(this@LoginActivity, grid::class.java))
+                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                 } else {
                     withContext(Dispatchers.Main) {
                         val snack =

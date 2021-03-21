@@ -58,6 +58,7 @@
     </LinearLayout>
 
 
+
 <ScrollView
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
@@ -332,15 +333,14 @@
 
 
         </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-
-
+        <Button
+            android:id="@+id/btnread"
+            android:layout_width="375sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#2196F3"
+            android:text="Click Here For More Books"
+            android:textSize="20sp" />
 
     </LinearLayout>
 </ScrollView>
@@ -354,6 +354,7 @@
         app:layout_constraintEnd_toEndOf="@+id/parent"
         app:layout_constraintEnd_toStartOf="@+id/parent"
         tools:ignore="UnknownId" />
+
 
 
 
