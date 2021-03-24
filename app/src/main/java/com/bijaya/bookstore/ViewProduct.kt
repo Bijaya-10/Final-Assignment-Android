@@ -3,11 +3,13 @@ package com.bijaya.bookstore
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bijaya.bookstore.adapter.ProductAdapter
 import com.bijaya.bookstore.db.ProductDB
 import com.bijaya.bookstore.entity.Product
+import com.bijaya.bookstore.repository.ProductRepository
 import com.bijaya1.weekfiveassignmentone.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -18,6 +20,7 @@ import kotlinx.coroutines.withContext
 class ViewProduct : AppCompatActivity() {
 
     private lateinit var recyclerProduct: RecyclerView;
+//    private lateinit var recyclerView: RecyclerView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,16 +29,41 @@ class ViewProduct : AppCompatActivity() {
         recyclerProduct.layoutManager = LinearLayoutManager(this@ViewProduct);
 
 
-
-
+loadProducts()
+    }
+    private fun loadProducts(){
         CoroutineScope(Dispatchers.IO).launch {
-            val products = ProductDB.getInstance(this@ViewProduct).getProductDao().getProduct();
-            val adapter = ProductAdapter(this@ViewProduct, products as ArrayList<Product>);
-            withContext(Main) {
-
-                recyclerProduct.adapter = adapter;
-                recyclerProduct.layoutManager = LinearLayoutManager(this@ViewProduct);
+            try{
+                val productRepository = ProductRepository()
+                val response = productRepository.getAllProduct()
+                if (response.success == true){
+                    val lstProduct = response.data
+                    withContext(Dispatchers.Main){
+                        recyclerProduct.adapter = ProductAdapter(this@ViewProduct,
+                            lstProduct!! as ArrayList<Product>
+                        )
+                        recyclerProduct.layoutManager = LinearLayoutManager(this@ViewProduct)
+                    }
+                }
+            }catch (ex:Exception){
+                withContext(Dispatchers.Main){
+                    Toast.makeText(this@ViewProduct,
+                        "Error : ${ex.toString()}",
+                        Toast.LENGTH_SHORT)
+                        .show()
+                }
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
+
 }

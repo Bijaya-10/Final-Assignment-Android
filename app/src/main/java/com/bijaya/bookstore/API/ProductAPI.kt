@@ -18,7 +18,7 @@ interface ProductAPI {
     ) : Response<AddProductResponse>
 
     // get all students
-    @GET("getproduct/")
+    @GET("product/fetch")
     suspend fun getAllProduct(
         @Header("Authorixation") token : String
     ) : Response<AllProductResponse>
@@ -26,7 +26,7 @@ interface ProductAPI {
 
     //delete student
 
-    @DELETE("student/{id}")
+    @DELETE("product/delete/{id}")
     suspend fun deleteProduct(
         @Header("Authorization") token: String,
         @Path("id") id: String

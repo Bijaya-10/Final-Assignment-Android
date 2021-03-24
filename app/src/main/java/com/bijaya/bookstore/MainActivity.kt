@@ -14,12 +14,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
+import com.bijaya.bookstore.*
 import com.bijaya.bookstore.Fragments.AboutFragment
 import com.bijaya.bookstore.Fragments.ContactFragment
 import com.bijaya.bookstore.Fragments.HomeFragment
-import com.bijaya.bookstore.ProductActivity
 import com.bijaya.bookstore.adapter.ViewPagerAdapter
-import com.bijaya.bookstore.grid
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.bijaya1.weekfiveassignmentone.Users.Post
 import com.bijaya1.weekfiveassignmentone.Users.Users
@@ -29,50 +28,40 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
-        private lateinit var btnhomefragment: Button
-    private lateinit var btnaboutfragment: Button
-    private lateinit var btncontactfragment: Button
-    private lateinit var btnread:Button
 
+    private lateinit var btnhome: Button
+    private lateinit var btnabout: Button
+    private lateinit var btncontact: Button
+    private lateinit var btnread: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btnhomefragment = findViewById(R.id.btnhome)
-        btnaboutfragment = findViewById(R.id.btnabout)
-        btncontactfragment = findViewById(R.id.btncontact)
+
+        btnhome = findViewById(R.id.btnhome)
+        btnabout = findViewById(R.id.btnabout)
+        btncontact = findViewById(R.id.btncontact)
+
         btnread = findViewById(R.id.btnread)
 
 
-btnhomefragment.setOnClickListener{
-    supportFragmentManager.beginTransaction().apply {
-        replace(R.id.linearcontainer, HomeFragment())
-        addToBackStack(null)
-        commit()
-    }
-}
-
-        btnaboutfragment.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.linearcontainer, AboutFragment())
-                addToBackStack(null)
-                commit()
-        }
+        btnhome.setOnClickListener {
+            val intent = Intent(this, home::class.java)
+            startActivity(intent)
         }
 
-
-        btncontactfragment.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.linearcontainer, ContactFragment())
-                addToBackStack(null)
-                commit()
-            }
+        btnabout.setOnClickListener {
+            val intent = Intent(this, about::class.java)
+            startActivity(intent)
         }
-
+        btncontact.setOnClickListener {
+            val intent = Intent(this, contact::class.java)
+            startActivity(intent)
+        }
 
         btnread.setOnClickListener {
             val intent = Intent(this, grid::class.java)
-          startActivity(intent)
+            startActivity(intent)
         }
 
 

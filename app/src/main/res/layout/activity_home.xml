@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EFEEEE"
+    tools:context="com.bijaya.bookstore.home">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/btnhome4"
+            android:layout_weight="1"
+            android:text="Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:id="@+id/btnabout4"
+            android:text="About Us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:id="@+id/btncontact4"
+            android:text="Contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Bookstore"
+            android:textSize="38dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btncrud"
+        android:layout_width="375sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#2196F3"
+        android:text="Book Updates"
+        android:textSize="20sp" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="55dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HARRY POTTER"
+                        android:textSize="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="sans-serif-black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/desc1"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif"
+                        />
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="200dp"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/i4"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="-10dp"
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Different Sun"
+                        android:textSize="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="sans-serif-black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/desc2"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif"
+                        />
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:maxHeight="100dp"
+                        android:layout_marginRight="-30dp"
+                        android:src="@drawable/differentsun"
+                        android:layout_alignParentRight="true"
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ferdinand"
+                        android:textSize="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="sans-serif-black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/desc3"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif"
+                        />
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="220dp"
+                        android:maxHeight="140dp"
+                        android:layout_marginRight="-30dp"
+                        android:src="@drawable/ferdinand"
+                        android:layout_alignParentRight="true"
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Story Thieves"
+                        android:textSize="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="sans-serif-black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/desc4"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif"
+                        />
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:maxHeight="100dp"
+                        android:layout_marginRight="-30dp"
+                        android:src="@drawable/i5"
+                        android:layout_alignParentRight="true"
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Owl Babies"
+                        android:textSize="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="sans-serif-black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/desc5"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif"
+                        />
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="250dp"
+                        android:maxHeight="100dp"
+                        android:layout_marginRight="-30dp"
+                        android:src="@drawable/i7"
+                        android:layout_alignParentRight="true"
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@drawable/background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="One Indian Girl"
+                        android:textSize="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="sans-serif-black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/desc6"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif"
+                        />
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="250dp"
+                        android:maxHeight="100dp"
+                        android:layout_marginRight="-30dp"
+                        android:src="@drawable/i8"
+                        android:layout_alignParentRight="true"
+                        />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/btnread"
+                android:layout_width="375sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#2196F3"
+                android:text="Click Here For More Books"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/parent"
+        app:layout_constraintEnd_toStartOf="@+id/parent"
+        tools:ignore="UnknownId" />
+
+
+
+</LinearLayout>

@@ -4,24 +4,18 @@
     <string name="desc1">
 
 
-        <br>J.K.Rowling is the British author\n</br>
-        <br>who created the popular and\n</br>
-        <br>critically acclaimed Harry \n</br>
-        <br>Potter series (seven \n</br>
-        <br>books published between 1997\n</br> and 2007)
+        <br>Author : J.K.Rowling\n</br>
+        <br>Published Date : (1997-2007) \n</br>
+<br>Paperback : $45.54\n</br>
+        <br>It is vailable in 60 Languages\n</br>
     </string>
 
     <string name="desc2">
 
-
-        <br>A Chinese family moves\n</br>
-        <br> from their native land\n</br>
-        <br> to a town in Germanyande\n</br>
-        <br> struggles to adjust\n</br>
-        <br> to the different culture\n</br> and 2007)
-        <br>Marriage hangs\n</br>
-         <br>in the balance\n</br>
-
+ <br>A Novel Of Africa\n</br>
+        <br>Author : Elaine Neil Orr\n </br>
+        <br>Published Date : April 2, 2013\n</br>
+        <br>Total price: $26.79\n</br>
     </string>
 
 
@@ -31,47 +25,47 @@
     <string name="desc3">
 
 
-        <br>Ferdinand is a 2017 American\n</br>
-        <br>computer-animated comedy\n</br>
-        <br>adventure film produced by\n</br>
-        <br>Blue Sky Studios and\n</br>
-        <br>distributed by 20th Century Fox.\n</br>
+        <br>Author : Munro Leaf\n</br>
+        <br>Published Date : 1936\n</br>
+        <br>Produced By Blue Sky\n</br>
+        <br>Studios and distributed by\n</br>
+        <br>20th Century Fox.\n</br>
+          <br>Paperback : 0.99$\n</br>
     </string>
 
 
     <string name="desc4">
 
 
-        <br>by James Riley\n</br>
-
-        <br>December 15, 2015\n</br>
+        <br>Author : James Riley\n</br>
+        <br>Published Date : December 15, 2015\n</br>
+            <br>Paperback : $6.49\n</br>
 
     </string>
 
 
     <string name="desc5">
 
-
-        <br>Originally published: 1992\n</br>
         <br>Author: Martin Waddell\n</br>
+        <br>Published Date: 1992\n</br>
         <br>Page count: 32\n</br>
-        <br>POriginal language: English\n</br>
-        <br>Genres: Childrens literature\n</br>)
-        <br>Picture book, Fiction\n</br>)
+        <br>Original language: English\n</br>
+        <br>Genres: Childrens literature\n</br>
+        <br>Paperback : $7.49</br>
     </string>
 
 
     <string name="desc6">
 
-
+       <br>Author: Chetan Bhagat\n</br>
         <br>Publisher: Rupa and Co.\n</br>
-        <br>Author: Chetan Bhagat\n</br>
+
         <br>Genre: Fiction\n</br>
         <br>Pages: 280\n</br>
 
     </string>
 
-    <string name = "desc7">
+    <string name="desc7">
         Are you looking for Bookstore management system for your final year project? We are here to help you. You can contact us This application based on Internet that aims to all the levels of management providing information of an organization. This system can be used as an information management system for the Bookstore. Final Year Project Help for Computer Science Where people can order the books which they want and even they do not need to bother about the location and do not worry about picking it up from the store. This system will help you to get the book from the store to your home just by a single click. We can also make the payment after delivery of the book which will make us feel safe regarding our money. The main menu will contain six parts which are as follows:
         Member Login
         Admin login
@@ -79,6 +73,14 @@
         Contact us
     </string>
 
+
+    <string name="desc8">
+        "Are you looking for Bookstore management system for your final year project? We are here to help you. You can contact us This application based on Internet that aims to all the levels of management providing information of an organization. This system can be used as an information management system for the Bookstore. Final Year Project Help for Web Developer, Android App Developer Where people can order the books which they want and even they do not need to bother about the location and do not worry about picking it up from the store.
+This system will help you to get the book from the store to your home just by a single click. We can also make the payment after delivery of the book which will make us feel safe regarding our money. The main menu will contain six parts which are as follows:
+Member Login,
+Admin login,
+About us Contact us!"
+    </string>
 
     <string name="hello_blank_fragment">hello_blank_fragment</string>
 

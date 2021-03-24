@@ -4,5 +4,5 @@ import com.bijaya.bookstore.entity.Product
 
 data class DeleteProductResponse (
     val success : Boolean?=null,
-    val data : Product?=null
+    val message : String?=null
 )

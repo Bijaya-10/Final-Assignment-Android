@@ -17,7 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeekFiveAssignmentOne"
         android:usesCleartextTraffic="true">
-        <activity android:name=".one"></activity>
+        <activity android:name="com.bijaya.bookstore.about"></activity>
+        <activity android:name="com.bijaya.bookstore.contact" />
+        <activity android:name="com.bijaya.bookstore.home" />
+        <activity android:name="com.bijaya.bookstore.MainActivity2" />
+        <activity android:name=".one" />
         <activity android:name=".GridView1" />
         <activity android:name="com.bijaya.bookstore.grid2" />
         <activity android:name="com.bijaya.bookstore.grid" />

@@ -34,10 +34,10 @@ class ProductRepository     : MyApiRequest() {
         }
     }
 
-    suspend fun deleteProduct(student: String): DeleteProductResponse {
+    suspend fun deleteProduct(id: String): DeleteProductResponse {
         return apiRequest {
             productAPI.deleteProduct(
-                ServiceBuilder.token!!,student
+                ServiceBuilder.token!!,id
             )
         }
     }
