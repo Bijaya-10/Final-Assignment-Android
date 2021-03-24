@@ -82,6 +82,10 @@ Admin login,
 About us Contact us!"
     </string>
 
+    <string name="desc9">
+        This process is so much time consuming and does not provide trust on retailers. There is the threat of forgery if you are new to marketing and do not know how to bargain from these streets sellers. There is no proper way of getting to know about the actual price of the books sometime shopkeepers sell it more than the market price by saying that the book is not available in the market. It might be the case that shopkeepers do not refund money if you purchase some wrong books. So, above this is the whole process of bookstore management system but by our system, we can make it little bit more simple and fast process to mechanize it. We can automate this process by creating the application which will allow you to use these things in a fully functional way and the application will include the following entities (an entity is a real-world object).
+    </string>
+
     <string name="hello_blank_fragment">hello_blank_fragment</string>
 
 

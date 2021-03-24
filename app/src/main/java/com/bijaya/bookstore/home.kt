@@ -12,6 +12,7 @@ class home : AppCompatActivity() {
     private lateinit var btnhome4: Button
     private lateinit var btnabout4: Button
     private lateinit var btncontact4: Button
+    private lateinit var btnread: Button
 
 
 
@@ -19,7 +20,7 @@ class home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-
+        btnread = findViewById(R.id.btnread)
         btnhome4 = findViewById(R.id.btnhome4)
         btnabout4 = findViewById(R.id.btnabout4)
         btncontact4 = findViewById(R.id.btncontact4)
@@ -35,6 +36,10 @@ class home : AppCompatActivity() {
         }
         btncontact4.setOnClickListener {
             val intent = Intent(this, contact::class.java)
+            startActivity(intent)
+        }
+        btnread.setOnClickListener {
+            val intent = Intent(this, grid::class.java)
             startActivity(intent)
         }
     }
