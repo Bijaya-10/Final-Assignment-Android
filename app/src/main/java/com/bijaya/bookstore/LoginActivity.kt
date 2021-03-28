@@ -14,6 +14,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.bijaya.bookstore.API.ServiceBuilder
 import com.bijaya.bookstore.MainActivity2
+import com.bijaya.bookstore.NotificationChannels
 import com.bijaya.bookstore.ProductActivity
 import com.bijaya.bookstore.grid
 import com.bijaya.bookstore.repository.CustomerRepository
@@ -76,8 +77,8 @@ class LoginActivity : AppCompatActivity() {
 
         val notification = NotificationCompat.Builder(this, notificationChannels.CHANNEL_1)
             .setSmallIcon(R.drawable.notification)
-            .setContentTitle("High priority notification")
-            .setContentText("This is my notification body")
+            .setContentTitle("Notification")
+            .setContentText("This is home page ")
             .setColor(Color.BLUE)
             .build()
 
