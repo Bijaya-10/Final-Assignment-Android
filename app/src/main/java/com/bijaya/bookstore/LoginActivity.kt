@@ -3,12 +3,15 @@ package com.bijaya1.weekfiveassignmentone
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import com.bijaya.bookstore.API.ServiceBuilder
 import com.bijaya.bookstore.MainActivity2
 import com.bijaya.bookstore.ProductActivity
@@ -59,9 +62,26 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             if (validateInput()) {
                 login();
+                showHighPriorityNotification()
             }
         }
 
+    }
+
+    private fun showHighPriorityNotification() {
+        val notificationManager = NotificationManagerCompat.from(this)
+
+        val notificationChannels = NotificationChannels(this)
+        notificationChannels.createNotificationChannels()
+
+        val notification = NotificationCompat.Builder(this, notificationChannels.CHANNEL_1)
+            .setSmallIcon(R.drawable.notification)
+            .setContentTitle("High priority notification")
+            .setContentText("This is my notification body")
+            .setColor(Color.BLUE)
+            .build()
+
+        notificationManager.notify(1, notification)
     }
 
 

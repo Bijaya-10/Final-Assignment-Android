@@ -61,7 +61,7 @@
             android:text="@string/desc10"
             android:textSize="16dp"
             android:textStyle="italic"
-            android:fontFamily="sans-serif-light"/>
+            android:fontFamily="sans-serif-black"/>
 
     </LinearLayout>
 
@@ -125,7 +125,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="200dp"
             app:cardCornerRadius="15dp"
             android:layout_marginTop="20dp">
@@ -156,12 +156,13 @@
                     />
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="165dp"
                     android:layout_height="200dp"
                     android:maxHeight="100dp"
-                    android:layout_marginRight="-30dp"
+
                     android:src="@drawable/differentsun"
                     android:layout_alignParentRight="true"
+                    android:layout_marginRight="-10dp"
                     />
 
             </RelativeLayout>
@@ -170,7 +171,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="200dp"
             app:cardCornerRadius="15dp"
             android:layout_marginTop="20dp">
@@ -204,9 +205,11 @@
                     android:layout_width="140dp"
                     android:layout_height="220dp"
                     android:maxHeight="140dp"
-                    android:layout_marginRight="-30dp"
+
                     android:src="@drawable/ferdinand"
                     android:layout_alignParentRight="true"
+
+                    android:layout_marginRight="-10dp"
                     />
 
             </RelativeLayout>
@@ -217,7 +220,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="200dp"
             app:cardCornerRadius="15dp"
             android:layout_marginTop="20dp">
@@ -251,9 +254,11 @@
                     android:layout_width="150dp"
                     android:layout_height="200dp"
                     android:maxHeight="100dp"
-                    android:layout_marginRight="-30dp"
+
                     android:src="@drawable/i5"
                     android:layout_alignParentRight="true"
+
+                    android:layout_marginRight="-10dp"
                     />
 
             </RelativeLayout>
@@ -264,7 +269,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="200dp"
             app:cardCornerRadius="15dp"
             android:layout_marginTop="20dp">
@@ -298,9 +303,10 @@
                     android:layout_width="130dp"
                     android:layout_height="250dp"
                     android:maxHeight="100dp"
-                    android:layout_marginRight="-30dp"
+
                     android:src="@drawable/i7"
                     android:layout_alignParentRight="true"
+                    android:layout_marginRight="-10dp"
                     />
 
             </RelativeLayout>
@@ -312,7 +318,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="200dp"
             app:cardCornerRadius="15dp"
             android:layout_marginTop="20dp">
@@ -346,9 +352,10 @@
                     android:layout_width="130dp"
                     android:layout_height="250dp"
                     android:maxHeight="100dp"
-                    android:layout_marginRight="-30dp"
+
                     android:src="@drawable/i8"
                     android:layout_alignParentRight="true"
+                    android:layout_marginRight="-10dp"
                     />
 
             </RelativeLayout>
