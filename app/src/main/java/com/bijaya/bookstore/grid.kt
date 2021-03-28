@@ -74,7 +74,11 @@ var modelList = ArrayList<Model>(
         val gridView = findViewById<GridView>(R.id.gridView)
         gridView.adapter = customAdapter;
 
-
+gridView.setOnItemClickListener { adapterView, view, l, i ->
+    var intent = Intent(this,ViewActivity::class.java)
+    intent.putExtra("data",modelList[i.toInt()])
+    startActivity(intent);
+}
         btncrud.setOnClickListener {
             val intent = Intent(this, ProductActivity::class.java)
             startActivity(intent);
@@ -121,5 +125,9 @@ var modelList = ArrayList<Model>(
 
 
     }
+
+}
+
+private fun Intent.putExtra(s: String, model: Model) {
 
 }

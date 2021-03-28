@@ -1,6 +1,6 @@
 package com.bijaya.bookstore
 
-class Model {
+class Model: serializable {
     var name:String?=null
     var image:Int?=null
 

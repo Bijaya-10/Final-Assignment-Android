@@ -50,10 +50,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome to Bookstore"
-            android:textSize="38dp"
+            android:textSize="35dp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/desc10"
+            android:textSize="16dp"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-light"/>
 
     </LinearLayout>
 
@@ -88,15 +96,18 @@
                     android:text="HARRY POTTER"
                     android:textSize="30dp"
                     android:layout_marginTop="1dp"
-                    android:fontFamily="sans-serif-black"/>
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="50dp"
                     android:text="@string/desc1"
                     android:textSize="20dp"
-                    android:fontFamily="sans-serif"
+                    android:textStyle="italic"
+
+                    android:fontFamily="sans-serif-light"
                     />
 
                 <ImageView
@@ -105,7 +116,7 @@
                     android:maxHeight="100dp"
                     android:src="@drawable/i4"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="-10dp"
+                    android:layout_marginRight="5dp"
                     />
 
             </RelativeLayout>
@@ -131,15 +142,17 @@
                     android:text="Different Sun"
                     android:textSize="30dp"
                     android:layout_marginTop="1dp"
-                    android:fontFamily="sans-serif-black"/>
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="50dp"
                     android:text="@string/desc2"
                     android:textSize="20dp"
-                    android:fontFamily="sans-serif"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-light"
                     />
 
                 <ImageView
@@ -174,15 +187,17 @@
                     android:text="Ferdinand"
                     android:textSize="30dp"
                     android:layout_marginTop="1dp"
-                    android:fontFamily="sans-serif-black"/>
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="50dp"
                     android:text="@string/desc3"
                     android:textSize="20dp"
-                    android:fontFamily="sans-serif"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-light"
                     />
 
                 <ImageView
@@ -219,15 +234,17 @@
                     android:text="Story Thieves"
                     android:textSize="30dp"
                     android:layout_marginTop="1dp"
-                    android:fontFamily="sans-serif-black"/>
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="50dp"
                     android:text="@string/desc4"
                     android:textSize="20dp"
-                    android:fontFamily="sans-serif"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-light"
                     />
 
                 <ImageView
@@ -264,15 +281,17 @@
                     android:text="Owl Babies"
                     android:textSize="30dp"
                     android:layout_marginTop="1dp"
-                    android:fontFamily="sans-serif-black"/>
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="50dp"
                     android:text="@string/desc5"
                     android:textSize="20dp"
-                    android:fontFamily="sans-serif"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-light"
                     />
 
                 <ImageView
@@ -310,15 +329,17 @@
                     android:text="One Indian Girl"
                     android:textSize="30dp"
                     android:layout_marginTop="1dp"
-                    android:fontFamily="sans-serif-black"/>
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="50dp"
                     android:text="@string/desc6"
                     android:textSize="20dp"
-                    android:fontFamily="sans-serif"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-light"
                     />
 
                 <ImageView

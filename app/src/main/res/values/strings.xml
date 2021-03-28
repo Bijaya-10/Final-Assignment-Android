@@ -89,4 +89,9 @@ About us Contact us!"
     <string name="hello_blank_fragment">hello_blank_fragment</string>
 
 
+
+    <string name="desc10">
+        All information regarding Book ISBN, edition status, and materials can change with the change of instructors, addition of sections and courses, or materials becoming outdated.We make every effort to ensure the accuracy of all the book and pricing information on this web site
+    </string>
+
 </resources>
