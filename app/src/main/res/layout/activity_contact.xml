@@ -61,7 +61,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="270dp"
         app:cardCornerRadius="15dp"
         android:layout_marginTop="60dp">
 
@@ -74,21 +74,27 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="        Contact Us For Further Details"
+                android:text="    Contact Us For Further Details"
                 android:textSize="25dp"
                 android:layout_marginTop="1dp"
                 android:fontFamily="sans-serif-black"/>
 
-            <TextView
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberEt"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="100dp"
+            android:hint="Enter Number/Code"
+
+            />
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9860848209"
-                android:textSize="40sp"
-                android:paddingTop="0dp"
-                android:layout_centerVertical="true"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-black"
-                android:layout_centerHorizontal="true"
+                android:id="@+id/dialBtn"
+                android:text="Dial"
+                android:layout_marginTop="200dp"
+                android:layout_marginLeft="125dp"
                 />
             <ImageView
                 android:layout_width="50sp"
@@ -130,74 +136,6 @@
     </androidx.cardview.widget.CardView>
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:cardCornerRadius="15dp"
-        android:layout_marginTop="10dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:background="@drawable/background">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="        Contact Us For Further Details"
-                android:textSize="25dp"
-                android:layout_marginTop="1dp"
-                android:fontFamily="sans-serif-black"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="014237999"
-                android:textSize="40sp"
-                android:paddingTop="0dp"
-                android:layout_centerVertical="true"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-black"
-                android:layout_centerHorizontal="true"
-                />
-            <ImageView
-                android:layout_width="50sp"
-                android:layout_height="55sp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/call"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="150dp"
-                />
-            <ImageView
-                android:layout_width="50sp"
-                android:layout_height="40sp"
-                android:layout_marginLeft="47dp"
-                android:background="@drawable/message"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="70dp"
-                android:layout_marginEnd="25dp"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="30dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Telephone Number"
-                android:textSize="30sp"
-                android:paddingTop="100sp"
-                android:layout_centerVertical="true"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-black"
-                android:layout_centerHorizontal="true"
-                />
-
-        </RelativeLayout>
-
-
-    </androidx.cardview.widget.CardView>
 
 
 

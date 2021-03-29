@@ -25,6 +25,9 @@
         android:text="Book Updates"
         android:textSize="20sp" />
 
-
+<ToggleButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onDefaultToogleClick"/>
 
 </LinearLayout>

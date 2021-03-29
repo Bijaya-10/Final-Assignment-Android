@@ -126,6 +126,10 @@ gridView.setOnItemClickListener { adapterView, view, l, i ->
 
     }
 
+    fun onDefaultToogleClick(view: View) {
+
+    }
+
 }
 
 private fun Intent.putExtra(s: String, model: Model) {
