@@ -1,4 +1,6 @@
 package com.bijaya.bookstore.response
 
-class CustomerOrdDelete {
-}
+data class CustomerOrdDelete  (
+    val success : Boolean?=null,
+    val message : String?=null
+)

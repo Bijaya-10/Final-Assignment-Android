@@ -10,7 +10,7 @@ import com.bijaya.bookstore.response.DeleteProductResponse
 import com.bijaya.bookstore.response.ImageResponse
 import okhttp3.MultipartBody
 
-class ProductRepository     : MyApiRequest() {
+class ProductRepository: MyApiRequest() {
 
     private val productAPI =
         ServiceBuilder.buildService(ProductAPI::class.java)
