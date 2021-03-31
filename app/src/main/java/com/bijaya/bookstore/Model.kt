@@ -1,6 +1,8 @@
 package com.bijaya.bookstore
 
-class Model: serializable {
+import java.io.Serializable
+
+class Model: Serializable {
     var name:String?=null
     var image:Int?=null
 

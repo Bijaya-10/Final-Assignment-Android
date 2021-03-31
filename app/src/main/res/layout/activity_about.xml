@@ -63,11 +63,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="THIS IS ABOUT US"
-                android:textSize="40dp"
+                android:text="THIS IS ABOUT US PAGE"
+                android:textSize="30dp"
                 android:textStyle="bold"
-
-                android:fontFamily="sans-serif"
+                android:fontFamily="sans-serif-black"
                 />
 
 
@@ -105,12 +104,13 @@
                         android:fontFamily="sans-serif"
                         />
 
+
                     <ImageView
-                        android:layout_width="600dp"
+                        android:layout_width="500dp"
                         android:layout_height="300dp"
                         android:maxHeight="100dp"
                         android:layout_marginRight="-30dp"
-                        android:src="@drawable/bookstore1"
+                        android:src="@drawable/i26"
                         android:layout_marginTop="600dp"
                         android:layout_alignParentRight="true"
                         />
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="Drawbacks Of Bookstore"
-                android:textSize="35dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
 
 
@@ -138,6 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 app:cardCornerRadius="15dp"
+                app:cardBackgroundColor="@color/cardview_shadow_start_color"
                 android:layout_marginTop="20dp">
 
                 <RelativeLayout

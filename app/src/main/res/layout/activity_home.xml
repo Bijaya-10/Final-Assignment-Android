@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,9 +50,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome to Bookstore"
-            android:textSize="38dp"
+            android:textSize="30dp"
             android:textStyle="bold"
             android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/desc10"
+            android:textSize="16dp"
+            android:textStyle="italic"
             android:fontFamily="sans-serif-black"/>
 
     </LinearLayout>
@@ -86,15 +96,18 @@
                         android:text="HARRY POTTER"
                         android:textSize="30dp"
                         android:layout_marginTop="1dp"
-                        android:fontFamily="sans-serif-black"/>
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-light"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="50dp"
                         android:text="@string/desc1"
                         android:textSize="20dp"
-                        android:fontFamily="sans-serif"
+                        android:textStyle="italic"
+
+                        android:fontFamily="sans-serif-light"
                         />
 
                     <ImageView
@@ -103,7 +116,7 @@
                         android:maxHeight="100dp"
                         android:src="@drawable/i4"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="-10dp"
+                        android:layout_marginRight="5dp"
                         />
 
                 </RelativeLayout>
@@ -112,7 +125,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="200dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="20dp">
@@ -129,24 +142,27 @@
                         android:text="Different Sun"
                         android:textSize="30dp"
                         android:layout_marginTop="1dp"
-                        android:fontFamily="sans-serif-black"/>
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-light"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="50dp"
                         android:text="@string/desc2"
                         android:textSize="20dp"
-                        android:fontFamily="sans-serif"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif-light"
                         />
 
                     <ImageView
-                        android:layout_width="150dp"
+                        android:layout_width="165dp"
                         android:layout_height="200dp"
                         android:maxHeight="100dp"
-                        android:layout_marginRight="-30dp"
+
                         android:src="@drawable/differentsun"
                         android:layout_alignParentRight="true"
+                        android:layout_marginRight="-10dp"
                         />
 
                 </RelativeLayout>
@@ -155,7 +171,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="200dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="20dp">
@@ -172,24 +188,28 @@
                         android:text="Ferdinand"
                         android:textSize="30dp"
                         android:layout_marginTop="1dp"
-                        android:fontFamily="sans-serif-black"/>
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-light"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="50dp"
                         android:text="@string/desc3"
                         android:textSize="20dp"
-                        android:fontFamily="sans-serif"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif-light"
                         />
 
                     <ImageView
                         android:layout_width="140dp"
                         android:layout_height="220dp"
                         android:maxHeight="140dp"
-                        android:layout_marginRight="-30dp"
+
                         android:src="@drawable/ferdinand"
                         android:layout_alignParentRight="true"
+
+                        android:layout_marginRight="-10dp"
                         />
 
                 </RelativeLayout>
@@ -200,7 +220,7 @@
 
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="200dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="20dp">
@@ -217,24 +237,28 @@
                         android:text="Story Thieves"
                         android:textSize="30dp"
                         android:layout_marginTop="1dp"
-                        android:fontFamily="sans-serif-black"/>
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-light"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="50dp"
                         android:text="@string/desc4"
                         android:textSize="20dp"
-                        android:fontFamily="sans-serif"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif-light"
                         />
 
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="200dp"
                         android:maxHeight="100dp"
-                        android:layout_marginRight="-30dp"
+
                         android:src="@drawable/i5"
                         android:layout_alignParentRight="true"
+
+                        android:layout_marginRight="-10dp"
                         />
 
                 </RelativeLayout>
@@ -245,7 +269,7 @@
 
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="200dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="20dp">
@@ -262,24 +286,27 @@
                         android:text="Owl Babies"
                         android:textSize="30dp"
                         android:layout_marginTop="1dp"
-                        android:fontFamily="sans-serif-black"/>
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-light"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="50dp"
                         android:text="@string/desc5"
                         android:textSize="20dp"
-                        android:fontFamily="sans-serif"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif-light"
                         />
 
                     <ImageView
                         android:layout_width="130dp"
                         android:layout_height="250dp"
                         android:maxHeight="100dp"
-                        android:layout_marginRight="-30dp"
+
                         android:src="@drawable/i7"
                         android:layout_alignParentRight="true"
+                        android:layout_marginRight="-10dp"
                         />
 
                 </RelativeLayout>
@@ -291,7 +318,7 @@
 
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="200dp"
                 app:cardCornerRadius="15dp"
                 android:layout_marginTop="20dp">
@@ -308,24 +335,27 @@
                         android:text="One Indian Girl"
                         android:textSize="30dp"
                         android:layout_marginTop="1dp"
-                        android:fontFamily="sans-serif-black"/>
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-light"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="50dp"
                         android:text="@string/desc6"
                         android:textSize="20dp"
-                        android:fontFamily="sans-serif"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif-light"
                         />
 
                     <ImageView
                         android:layout_width="130dp"
                         android:layout_height="250dp"
                         android:maxHeight="100dp"
-                        android:layout_marginRight="-30dp"
+
                         android:src="@drawable/i8"
                         android:layout_alignParentRight="true"
+                        android:layout_marginRight="-10dp"
                         />
 
                 </RelativeLayout>
@@ -353,7 +383,6 @@
         app:layout_constraintEnd_toEndOf="@+id/parent"
         app:layout_constraintEnd_toStartOf="@+id/parent"
         tools:ignore="UnknownId" />
-
 
 
 </LinearLayout>
