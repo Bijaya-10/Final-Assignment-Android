@@ -7,8 +7,11 @@ import androidx.room.PrimaryKey
 data class Product(
 
     val _id: String? = null,
-    val Book_Name: String? = null,
-    val Book_Number: String? = null,
+    val Customer_Name: String? = null,
+    val Customer_Address: String? = null,
+    val Customer_Book: String? = null,
+    val Customer_Email: String? = null,
+
     val Book_Image: String? = null
 )
 {

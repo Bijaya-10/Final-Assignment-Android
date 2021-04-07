@@ -43,8 +43,8 @@ class CustomerAdapter (
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = lstProduct[position]
-        holder.tvbookname.text = product.Book_Name
-        holder.tvbooknumber.text = product.Book_Number
+//        holder.tvbookname.text = product.Book_Name
+//        holder.tvbooknumber.text = product.Book_Number
 
 //
 //        holder.edit.setOnClickListener {
@@ -64,7 +64,7 @@ class CustomerAdapter (
 
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Delete ")
-            builder.setMessage("Are You Sure You Want To Delete  ${product.Book_Name} ?")
+//            builder.setMessage("Are You Sure You Want To Delete  ${product.Book_Name} ?")
             builder.setIcon(android.R.drawable.ic_dialog_alert)
             builder.setPositiveButton("Yes") { _, _ ->
 

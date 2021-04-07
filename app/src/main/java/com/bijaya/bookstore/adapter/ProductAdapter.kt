@@ -26,8 +26,10 @@ class ProductAdapter(
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
     class ProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         //        val imgProfile: ImageView = view.findViewById(R.id.imgProfile)
-        val tvbookname: TextView = view.findViewById(R.id.tvbookname)
-        val tvbooknumber: TextView = view.findViewById(R.id.tvbooknumber)
+        val tvname: TextView = view.findViewById(R.id.tvname)
+        val tvbook: TextView = view.findViewById(R.id.tvbook)
+        val tvemail: TextView = view.findViewById(R.id.tvemail)
+        val tvaddress: TextView = view.findViewById(R.id.tvaddress)
         val delete: ImageView = view.findViewById(R.id.delete)
         val edit: ImageView = view.findViewById(R.id.edit)
     }
@@ -43,8 +45,10 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = lstProduct[position]
-        holder.tvbookname.text = product.Book_Name
-        holder.tvbooknumber.text = product.Book_Number
+        holder.tvname.text = product.Customer_Name
+        holder.tvbook.text = product.Customer_Book
+        holder.tvaddress.text = product.Customer_Address
+        holder.tvemail.text = product.Customer_Email
 
 //
 //        holder.edit.setOnClickListener {
@@ -64,7 +68,7 @@ class ProductAdapter(
 
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Delete ")
-            builder.setMessage("Are You Sure You Want To Delete  ${product.Book_Name} ?")
+            builder.setMessage("Are You Sure You Want To Delete  ${product.Customer_Name} ?")
             builder.setIcon(android.R.drawable.ic_dialog_alert)
             builder.setPositiveButton("Yes") { _, _ ->
 

@@ -11,14 +11,14 @@ import retrofit2.http.*
 
 interface ProductAPI {
 
-    @POST("product/insert")
+    @POST("order/insert")
     suspend fun addProduct(
         @Header("Authorization") token : String,
         @Body product : Product
     ) : Response<AddProductResponse>
 
     // get all students
-    @GET("product/fetch")
+    @GET("order/fetch")
     suspend fun getAllProduct(
         @Header("Authorixation") token : String
     ) : Response<AllProductResponse>
@@ -26,7 +26,7 @@ interface ProductAPI {
 
     //delete student
 
-    @DELETE("product/delete/{id}")
+    @DELETE("order/delete/{id}")
     suspend fun deleteProduct(
         @Header("Authorization") token: String,
         @Path("id") id: String

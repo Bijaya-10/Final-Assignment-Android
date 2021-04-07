@@ -30,8 +30,12 @@ import java.util.*
 class ProductActivity : AppCompatActivity() {
 
 
-    private lateinit var etbookname: EditText
-    private lateinit var etbooknumber: EditText
+    private lateinit var etname: EditText
+    private lateinit var etemail: EditText
+    private lateinit var etbook: EditText
+    private lateinit var etaddress: EditText
+
+
     private lateinit var btnsave: Button
     private lateinit var imgProfile: ImageView
 
@@ -40,8 +44,10 @@ class ProductActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
 
-        etbookname = findViewById(R.id.etbookname)
-        etbooknumber = findViewById(R.id.etbooknumber)
+        etname = findViewById(R.id.etname)
+        etbook = findViewById(R.id.etbook)
+        etaddress = findViewById(R.id.etaddress)
+        etemail = findViewById(R.id.etemail)
 
         btnsave = findViewById(R.id.btnsave)
 
@@ -53,11 +59,14 @@ class ProductActivity : AppCompatActivity() {
 
 
         btnsave.setOnClickListener {
-            val bookname = etbookname.text.toString()
-            val booknumber = etbooknumber.text.toString()
+            val customername = etname.text.toString()
+            val customeraddress = etaddress.text.toString()
+            val customeremail = etemail.text.toString()
+            val customerbook = etbook.text.toString()
 
 
-            val product = Product(Book_Name = bookname, Book_Number = booknumber)
+            val product = Product(Customer_Name = customername, Customer_Address = customeraddress,
+                Customer_Email = customeremail,Customer_Book = customerbook,)
 
             CoroutineScope(Dispatchers.IO).launch {
                 try {
@@ -72,7 +81,7 @@ class ProductActivity : AppCompatActivity() {
                             Toast.makeText(
                                 this@ProductActivity,
 
-                                "Product Added",
+                                "Book Ordered",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
