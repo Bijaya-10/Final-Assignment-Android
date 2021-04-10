@@ -2,10 +2,8 @@ package com.bijaya.bookstore.repository
 
 import com.bijaya.bookstore.API.CustomerOrderAPI
 import com.bijaya.bookstore.API.MyApiRequest
-import com.bijaya.bookstore.API.ProductAPI
 import com.bijaya.bookstore.API.ServiceBuilder
 import com.bijaya.bookstore.entity.CustomerOrderEntity
-import com.bijaya.bookstore.entity.Product
 import com.bijaya.bookstore.response.*
 import okhttp3.MultipartBody
 

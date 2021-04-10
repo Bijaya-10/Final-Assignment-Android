@@ -13,6 +13,7 @@ import kotlin.math.log
 
 class grid : AppCompatActivity() {
     private lateinit var btncrud: Button
+    private lateinit var btnread1: Button
 var modelList = ArrayList<Model>(
 
 
@@ -64,6 +65,7 @@ var modelList = ArrayList<Model>(
 
 
         btncrud = findViewById(R.id.btncrud)
+        btnread1 = findViewById(R.id.btnread1)
 
         for(i in names.indices){
             modelList.add(Model(names[i],images[i]))
@@ -80,11 +82,18 @@ gridView.setOnItemClickListener { adapterView, view, i, l ->
     startActivity(intent)
 
 }
+        btnread1.setOnClickListener {
+            val intent = Intent(this,ProductActivity::class.java)
+            startActivity(intent)
+        }
+
+
         btncrud.setOnClickListener {
-            val intent = Intent(this, ProductActivity::class.java)
+            val intent = Intent(this, CustomerOrder::class.java)
             startActivity(intent);
         }
     }
+
 
 
     class CustomAdapter(

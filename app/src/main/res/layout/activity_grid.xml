@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="900dp"
     android:orientation="vertical"
     tools:context="com.bijaya.bookstore.grid">
 
@@ -24,6 +24,20 @@
         android:background="#2196F3"
         android:text="Book Updates"
         android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/btnread1"
+        android:layout_width="375sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#2196F3"
+        android:layout_marginTop="-300dp"
+        android:text="Book Updates"
+
+        android:textSize="20sp" />
+
+
 
 <ToggleButton
     android:layout_width="wrap_content"

@@ -45,7 +45,7 @@
 
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -70,15 +70,25 @@
                 />
 
 
-            <ImageView
-                android:layout_width="400dp"
-                android:layout_height="300dp"
-                android:maxHeight="100dp"
-                android:layout_marginRight="-30dp"
-                android:src="@drawable/i25"
+
+
+
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:fillColor="#FFFFFF"
+                app:pageColor="#000000"
+                app:radius="6dp"
                 android:layout_marginTop="10dp"
-                android:layout_alignParentRight="true"
+                app:slideInterval="4000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp"
+                app:autoPlay="true"
                 />
+
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
@@ -160,16 +170,19 @@
                         />
 
                     <ImageView
-                        android:layout_width="500dp"
+                        android:layout_width="580dp"
                         android:layout_height="300dp"
                         android:maxHeight="100dp"
-                        android:layout_marginRight="-30dp"
-                        android:src="@drawable/i26"
+                        android:layout_marginRight="0dp"
+                        android:src="@drawable/i25"
                         android:layout_marginTop="600dp"
                         android:layout_alignParentRight="true"
                         />
 
                 </RelativeLayout>
+
+
+
 
 
             </androidx.cardview.widget.CardView>
@@ -184,14 +197,10 @@
 
 
 
-
-
-
-
-
-
         </LinearLayout>
     </ScrollView>
+
+
 
 
 
