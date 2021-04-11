@@ -5,12 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bijaya.bookstore.adapter.CustomerAdapter
+import com.bijaya.bookstore.adapter.CommentAdapter
 
-import com.bijaya.bookstore.adapter.ProductAdapter
-import com.bijaya.bookstore.entity.Product
+import com.bijaya.bookstore.entity.CustomerOrderEntity
 import com.bijaya.bookstore.repository.CustomerOrderRepo
-import com.bijaya.bookstore.repository.ProductRepository
 import com.bijaya1.weekfiveassignmentone.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -39,8 +37,8 @@ class ViewCustomerOrder : AppCompatActivity() {
                 if (response.success == true){
                     val lstProduct = response.data
                     withContext(Dispatchers.Main){
-                        recyclerProduct.adapter = CustomerAdapter(this@ViewCustomerOrder,
-                            lstProduct!! as ArrayList<Product>
+                        recyclerProduct.adapter = CommentAdapter(this@ViewCustomerOrder,
+                            lstProduct!! as ArrayList<CustomerOrderEntity>
                         )
                         recyclerProduct.layoutManager = LinearLayoutManager(this@ViewCustomerOrder)
                     }
