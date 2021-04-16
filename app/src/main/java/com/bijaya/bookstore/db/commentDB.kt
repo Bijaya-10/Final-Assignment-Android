@@ -2,24 +2,24 @@ package com.bijaya.bookstore.db
 
 import android.content.Context
 import androidx.room.*
-import com.bijaya.bookstore.dao.CustomerOrderDAO
 import com.bijaya.bookstore.dao.ProductDAO
-import com.bijaya.bookstore.entity.CustomerOrderEntity
+import com.bijaya.bookstore.dao.commentDAO
 import com.bijaya.bookstore.entity.Product
+import com.bijaya.bookstore.entity.comment
 
-@Database(entities = ([CustomerOrderEntity::class]), version = 1, exportSchema = false)
-abstract class CustomerOrderDB : RoomDatabase() {
+@Database(entities = ([comment::class]), version = 1, exportSchema = false)
+abstract class commentDB : RoomDatabase() {
     //    abstract fun getUserDao(): ProductDAO
-    abstract fun getProductDao(): CustomerOrderDAO;
+    abstract fun getProductDao(): commentDAO;
 
 
     companion object {
         @Volatile
-        private var instance: CustomerOrderDB? = null
+        private var instance: commentDB? = null
 
-        fun getInstance(context: Context): CustomerOrderDB {
+        fun getInstance(context: Context): commentDB {
             if (instance == null) {
-                synchronized(CustomerOrderDB::class) {
+                synchronized(commentDB::class) {
                     instance = buildDatabase(context)
                 }
             }
@@ -29,8 +29,8 @@ abstract class CustomerOrderDB : RoomDatabase() {
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
-                CustomerOrderDB::class.java,
-                "ProductDB"
+                commentDB::class.java,
+                "commentDB"
             ).fallbackToDestructiveMigration()
                 .build()
 

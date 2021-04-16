@@ -13,6 +13,7 @@ import com.bijaya.bookstore.API.ServiceBuilder
 import com.bijaya.bookstore.entity.Product
 import com.bijaya.bookstore.repository.ProductRepository
 import com.bijaya1.weekfiveassignmentone.R
+import com.bumptech.glide.Glide
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,7 +26,7 @@ class ProductAdapter(
 
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
     class ProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        //        val imgProfile: ImageView = view.findViewById(R.id.imgProfile)
+                val imgProfile: ImageView = view.findViewById(R.id.imgProfile)
         val tvname: TextView = view.findViewById(R.id.tvname)
         val tvbook: TextView = view.findViewById(R.id.tvbook)
         val tvemail: TextView = view.findViewById(R.id.tvemail)
@@ -49,7 +50,11 @@ class ProductAdapter(
         holder.tvbook.text = product.Customer_Book
         holder.tvaddress.text = product.Customer_Address
         holder.tvemail.text = product.Customer_Email
-
+        product.Book_Image?.let {
+            Glide.with(context!!)
+                .load(ServiceBuilder.loadImagePath() + it)
+                .into(holder.imgProfile)
+        }
 //
 //        holder.edit.setOnClickListener {
 //            val intent = Intent(context,UpdateActivity::class.java)

@@ -40,6 +40,7 @@ class contact : AppCompatActivity() {
         recipientEt = findViewById(R.id.recipientEt)
 
 
+
     sendEmailBtn.setOnClickListener {
     val recipient = recipientEt.text.toString().trim()
 //        val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + Uri.encode(recipient)))

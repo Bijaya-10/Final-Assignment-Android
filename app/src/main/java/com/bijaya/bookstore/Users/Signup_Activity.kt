@@ -1,12 +1,18 @@
 package com.bijaya1.weekfiveassignmentone
 
+import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
+import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.Parcelable
 import android.view.View
 import android.widget.*
+import android.widget.Toast.makeText
 import com.bijaya.bookstore.entity.customer
 import com.bijaya.bookstore.repository.CustomerRepository
 import com.bijaya1.weekfiveassignmentone.Users.Users
@@ -16,10 +22,11 @@ import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class Signup_Activity : AppCompatActivity(), View.OnClickListener {
+class Signup_Activity : AppCompatActivity(), View.OnClickListener,SensorEventListener {
 
     private lateinit var btnRegister:Button
-
+    private lateinit var sensorManager: SensorManager;
+    private var sensor: Sensor? = null;
 
     private lateinit var etFname:EditText
     private lateinit var etLname:EditText
@@ -42,10 +49,23 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
         etCPassword= findViewById(R.id.etCPassword)
 
 
+        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager;
+        if (!checkSensor()) {
+            return
+        } else {
+            sensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+            sensorManager.registerListener(
+                this@Signup_Activity,
+                sensor,
+                SensorManager.SENSOR_DELAY_NORMAL
+            );
+        }
+
         loginLink = findViewById(R.id.loginLink)
 
         btnRegister.setOnClickListener{
             registerUser()
+            vibratePhone()
         }
 
 
@@ -101,6 +121,53 @@ class Signup_Activity : AppCompatActivity(), View.OnClickListener {
 
         }
     }
+
+
+    private fun checkSensor(): Boolean {
+        var flag = true;
+        if (sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY) == null) {
+            flag = false
+        }
+        return flag;
+    }
+    override fun onSensorChanged(event: SensorEvent?) {
+        val values = event!!.values[0];
+        if (values <= 4) {
+            makeText(this, "You blocked the screen.", Toast.LENGTH_SHORT).show()
+        }
+    }
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+    }
+
+    @SuppressLint("ServiceCast")
+    private fun vibratePhone() {
+        val vibrator = this?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        if (Build.VERSION.SDK_INT >= 26) {
+            vibrator.vibrate(VibrationEffect.createOneShot(2000, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vibrator.vibrate(2000)
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     override fun onClick(v: View?) {
         when (v?.id){

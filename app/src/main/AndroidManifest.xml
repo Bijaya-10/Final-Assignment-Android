@@ -3,6 +3,7 @@
     package="com.bijaya1.weekfiveassignmentone">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -17,7 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeekFiveAssignmentOne"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.bijaya.bookstore.adapter.CommentAdapter"></activity>
+        <activity android:name="com.bijaya.bookstore.CommentActivity"></activity>
+        <activity android:name="com.bijaya.bookstore.ViewComment" />
+        <activity android:name="com.bijaya.bookstore.Users.CommentActivity" />
+        <activity android:name="com.bijaya.bookstore.Users.ViewComment" />
+        <activity android:name="com.bijaya.bookstore.response.CommentActivity" />
+        <activity android:name="com.bijaya.bookstore.adapter.CommentAdapter" />
         <activity android:name="com.bijaya.bookstore.Splash_Activity" />
         <activity android:name="com.bijaya.bookstore.ViewActivity" />
         <activity android:name="com.bijaya.bookstore.ViewCustomerOrder" />

@@ -5,7 +5,7 @@ import androidx.room.*
 import com.bijaya.bookstore.dao.ProductDAO
 import com.bijaya.bookstore.entity.Product
 
-@Database(entities = ([Product::class]), version = 1, exportSchema = false)
+@Database(entities = ([Product::class]), version = 2, exportSchema = false)
 abstract class ProductDB : RoomDatabase() {
     //    abstract fun getUserDao(): ProductDAO
     abstract fun getProductDao(): ProductDAO;

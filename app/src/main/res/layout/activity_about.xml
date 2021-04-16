@@ -192,7 +192,17 @@
 
 
 
+            <Button
+                android:id="@+id/btnread1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
+                android:layout_gravity="center"
+
+                android:background="#2196F3"
+                android:text="Book Updates"
+                android:textSize="20sp" />
 
 
 

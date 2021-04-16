@@ -5,8 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Product(
-
-    val _id: String? = null,
+    @PrimaryKey(autoGenerate = false)
+    val _id: String = "",
     val Customer_Name: String? = null,
     val Customer_Address: String? = null,
     val Customer_Book: String? = null,
@@ -14,7 +14,3 @@ data class Product(
 
     val Book_Image: String? = null
 )
-{
-    @PrimaryKey(autoGenerate = true)
-    var productId:Int? = null;
-}

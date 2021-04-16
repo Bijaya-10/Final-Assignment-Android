@@ -4,11 +4,12 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class CustomerOrderEntity  (
+data class comment(
 
     val _id: String? = null,
     val Book_Name: String? = null,
     val Book_Number: String? = null,
+
     val Book_Image: String? = null
 )
 {

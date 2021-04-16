@@ -1,23 +1,17 @@
-package com.bijaya1.bookstore
-
-import androidx.test.espresso.Espresso
+package com.college.pmcd
 import androidx.test.espresso.Espresso.closeSoftKeyboard
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.*
-import androidx.test.espresso.assertion.ViewAssertions
-import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.filters.LargeTest
 import com.bijaya1.weekfiveassignmentone.LoginActivity
-import com.bijaya1.weekfiveassignmentone.MainActivity
 import com.bijaya1.weekfiveassignmentone.R
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-
 @LargeTest
 @RunWith(JUnit4::class)
 class TestLogin {
@@ -39,5 +33,4 @@ class TestLogin {
         Thread.sleep(2000);
 
     }
-
 }

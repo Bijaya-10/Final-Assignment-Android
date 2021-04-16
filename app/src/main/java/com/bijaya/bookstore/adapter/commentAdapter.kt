@@ -9,33 +9,36 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.bijaya.bookstore.entity.CustomerOrderEntity
-import com.bijaya.bookstore.repository.CustomerOrderRepo
+import com.bijaya.bookstore.API.ServiceBuilder
+import com.bijaya.bookstore.entity.Product
+import com.bijaya.bookstore.entity.comment
+import com.bijaya.bookstore.repository.ProductRepository
+import com.bijaya.bookstore.repository.commentRepository
 import com.bijaya1.weekfiveassignmentone.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.w3c.dom.Comment
 import java.lang.Exception
 
-class CommentAdapter(
+class commentAdapter(
     private val context: Context,
-    private val lstProduct: ArrayList<CustomerOrderEntity>
+    private val lstProduct: ArrayList<comment>
 
-) : RecyclerView.Adapter<CommentAdapter.ProductViewHolder>() {
+) : RecyclerView.Adapter<commentAdapter.ProductViewHolder>() {
     class ProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         //        val imgProfile: ImageView = view.findViewById(R.id.imgProfile)
-        val etbookname: TextView = view.findViewById(R.id.etbookname)
-        val etbooknumber: TextView = view.findViewById(R.id.etbooknumber)
-//        val tvemail: TextView = view.findViewById(R.id.tvemail)
-//        val tvaddress: TextView = view.findViewById(R.id.tvaddress)
+        val tvname: TextView = view.findViewById(R.id.tvname)
+        val tvbook: TextView = view.findViewById(R.id.tvbook)
+
         val delete: ImageView = view.findViewById(R.id.delete)
         val edit: ImageView = view.findViewById(R.id.edit)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.recyclerviewcustomerorder, parent, false)
+            .inflate(R.layout.recyclerviewcomment, parent, false)
         return ProductViewHolder(view)
     }
     override fun getItemCount(): Int {
@@ -43,9 +46,9 @@ class CommentAdapter(
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        val product = lstProduct[position]
-        holder.etbookname.text = product.Book_Name
-        holder.etbooknumber.text = product.Book_Number
+        val Comment = lstProduct[position]
+        holder.tvname.text = Comment.Book_Name
+        holder.tvbook.text = Comment.Book_Number
 
 
 //
@@ -66,14 +69,14 @@ class CommentAdapter(
 
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Delete ")
-            builder.setMessage("Are You Sure You Want To Delete  ${product.Book_Name} ?")
+            builder.setMessage("Are You Sure You Want To Delete  ${Comment.Book_Name} ?")
             builder.setIcon(android.R.drawable.ic_dialog_alert)
             builder.setPositiveButton("Yes") { _, _ ->
 
                 CoroutineScope(Dispatchers.IO).launch {
                     try {
-                        val customerorderRepository = CustomerOrderRepo()
-                        val response = customerorderRepository.deleteProduct(product._id!!)
+                        val CommentRespository = commentRepository()
+                        val response = CommentRespository.deleteProduct(Comment._id!!)
                         if (response.success == true) {
                             withContext(Dispatchers.Main) {
                                 Toast.makeText(
@@ -86,7 +89,7 @@ class CommentAdapter(
                             }
                         }
                         withContext(Dispatchers.Main) {
-                            lstProduct.remove(product)
+                            lstProduct.remove(Comment)
                             notifyDataSetChanged()
                         }
 

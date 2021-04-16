@@ -12,7 +12,7 @@ import com.synnapps.carouselview.CarouselView
 class about : AppCompatActivity() {
 
     private lateinit var carouselView: CarouselView
-
+    private lateinit var btnread1: Button
     private lateinit var btnhome2: Button
     private lateinit var btnabout2: Button
     private lateinit var btncontact2: Button
@@ -40,6 +40,7 @@ class about : AppCompatActivity() {
         btnabout2 = findViewById(R.id.btnabout2)
         btncontact2 = findViewById(R.id.btncontact2)
 
+        btnread1 = findViewById(R.id.btnread1)
         carouselView.setImageListener { position, imageView ->
             imageView.setImageResource(sampleImages[position])
         }
@@ -47,6 +48,10 @@ class about : AppCompatActivity() {
             Toast.makeText(applicationContext, books[position], Toast.LENGTH_SHORT).show()
         }
 
+        btnread1.setOnClickListener {
+            val intent = Intent(this,ProductActivity::class.java)
+            startActivity(intent)
+        }
         btnhome2.setOnClickListener {
             val intent = Intent(this, home::class.java)
             startActivity(intent)

@@ -17,6 +17,12 @@ interface ProductAPI {
         @Body product : Product
     ) : Response<AddProductResponse>
 
+    @POST("/image")
+    suspend fun addImage(
+        @Header("Authorization") token : String,
+        @Body product : Product
+    ) : Response<AddProductResponse>
+
     // get all students
     @GET("order/fetch")
     suspend fun getAllProduct(
@@ -34,7 +40,7 @@ interface ProductAPI {
 
 
     @Multipart
-    @PUT("student/{id}/photo")
+    @POST("image/{id}")
     suspend fun uploadImage(
         @Header("Authorization") token: String,
         @Path ("id") id:String,

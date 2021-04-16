@@ -66,22 +66,22 @@ class ProductActivity : AppCompatActivity() {
 
 
             val product = Product(Customer_Name = customername, Customer_Address = customeraddress,
-                Customer_Email = customeremail,Customer_Book = customerbook,)
+                Customer_Email = customeremail,Customer_Book = customerbook)
 
             CoroutineScope(Dispatchers.IO).launch {
                 try {
                     val productRepository = ProductRepository()
                     val response = productRepository.addProduct(product)
                     if (response.success == true) {
-//                        if (imageUrl != null){
-//                            uploadImage(response.data!!._id!!)
-//                        }
+                        if (imageUrl != null){
+                            uploadImage(response.data!!._id!!.toString())
+                        }
                         withContext(Dispatchers.Main) {
 
                             Toast.makeText(
                                 this@ProductActivity,
 
-                                "Book Ordered",
+                                "${response.data?._id}",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
@@ -103,17 +103,17 @@ class ProductActivity : AppCompatActivity() {
 
     }
 
-    private fun uploadImage(studentId: String) {
+    private fun uploadImage(id: String) {
         if (imageUrl != null) {
             val file = File(imageUrl!!)
             val reqFile =
                 RequestBody.create(MediaType.parse("multipart/form-data"), file)
             val body =
-                MultipartBody.Part.createFormData("file", file.name, reqFile)
+                MultipartBody.Part.createFormData("Book_Image", file.name, reqFile)
             CoroutineScope(Dispatchers.IO).launch {
                 try {
                     val studentRepository = ProductRepository()
-                    val response = studentRepository.uploadImage(studentId, body)
+                    val response = studentRepository.uploadImage(id,body)
                     if (response.success == true) {
                         withContext(Dispatchers.Main) {
                             Toast.makeText(this@ProductActivity, "Uploaded", Toast.LENGTH_SHORT)
