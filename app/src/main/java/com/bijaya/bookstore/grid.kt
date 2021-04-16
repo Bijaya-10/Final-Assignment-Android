@@ -14,15 +14,15 @@ import kotlin.math.log
 class grid : AppCompatActivity() {
     private lateinit var btncrud: Button
 
-var modelList = ArrayList<Model>(
-)
+    var modelList = ArrayList<Model>(
+    )
 
     var names = arrayOf(
 
-            "Harry Potter",
-            "Story Thieves",
-            "Owl Babies",
-            "One Indian Girl",
+        "Harry Potter",
+        "Story Thieves",
+        "Owl Babies",
+        "One Indian Girl",
         "Story Of My Life",
         "Collector of names",
         "Pirate Tale",
@@ -35,13 +35,13 @@ var modelList = ArrayList<Model>(
         R.drawable.i5,
         R.drawable.i7,
         R.drawable.i8,
-                R.drawable.i10,
-                R.drawable.i11,
-                R.drawable.i12,
-                R.drawable.i13,
-                R.drawable.i14,
-                R.drawable.i15,
-                R.drawable.i16,
+        R.drawable.i10,
+        R.drawable.i11,
+        R.drawable.i12,
+        R.drawable.i13,
+        R.drawable.i14,
+        R.drawable.i15,
+        R.drawable.i16,
 
 
         R.drawable.i17,
@@ -55,7 +55,6 @@ var modelList = ArrayList<Model>(
     )
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grid)
@@ -63,8 +62,8 @@ var modelList = ArrayList<Model>(
 
         btncrud = findViewById(R.id.btncrud)
 
-        for(i in names.indices){
-            modelList.add(Model(names[i],images[i]))
+        for (i in names.indices) {
+            modelList.add(Model(names[i], images[i]))
         }
 
         var customAdapter = CustomAdapter(modelList, this);
@@ -72,36 +71,49 @@ var modelList = ArrayList<Model>(
         val gridView = findViewById<GridView>(R.id.gridView)
         gridView.adapter = customAdapter;
 
-gridView.setOnItemClickListener { adapterView, view, i, l ->
-    var intent = Intent(this,ViewActivity::class.java)
-    intent.putExtra("data",modelList[i])
-    startActivity(intent)
+        gridView.setOnItemClickListener { adapterView, view, i, l ->
+            var intent = Intent(this, ViewActivity::class.java)
+            intent.putExtra("data", modelList[i])
+            startActivity(intent)
 
-}
+        }
+//
+//        gridView.onItemClickListener = object : AdapterView.OnItemClickListener {
+//            override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+//                val intent = Intent(this@grid, ViewActivity::class.java);
+//                val bookName = names.get(position).toString();
+//
+//
+//
+//                   intent.putExtra("bookName",bookName);
+//                   startActivity(intent);
+//            }
+//
+//        }
 
 
         btncrud.setOnClickListener {
-            val intent = Intent(this,CommentActivity::class.java)
+            val intent = Intent(this, CommentActivity::class.java)
             startActivity(intent)
         }
-
 
 
     }
 
 
-
     class CustomAdapter(
         var itemModel: ArrayList<Model>,
-                var context: Context
-    ): BaseAdapter(){
+        var context: Context,
+    ) : BaseAdapter() {
 
 
-        var LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        var LayoutInflater =
+            context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+
         override fun getView(position: Int, view: View?, viewGroup: ViewGroup?): View {
             var view = view;
-            if(view==null){
-                view = LayoutInflater.inflate(R.layout.row_data,viewGroup,false)
+            if (view == null) {
+                view = LayoutInflater.inflate(R.layout.row_data, viewGroup, false)
             }
 
             var tvImageName = view?.findViewById<TextView>(R.id.imageName)
@@ -114,7 +126,7 @@ gridView.setOnItemClickListener { adapterView, view, i, l ->
         }
 
         override fun getCount(): Int {
-           return itemModel.size
+            return itemModel.size
 
         }
 
@@ -126,7 +138,6 @@ gridView.setOnItemClickListener { adapterView, view, i, l ->
         override fun getItemId(position: Int): Long {
             return position.toLong()
         }
-
 
 
     }

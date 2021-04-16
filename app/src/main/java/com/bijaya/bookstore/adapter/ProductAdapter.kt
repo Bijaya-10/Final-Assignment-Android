@@ -26,7 +26,7 @@ class ProductAdapter(
 
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
     class ProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-                val imgProfile: ImageView = view.findViewById(R.id.imgProfile)
+        val imgProfile: ImageView = view.findViewById(R.id.imgProfile)
         val tvname: TextView = view.findViewById(R.id.tvname)
         val tvbook: TextView = view.findViewById(R.id.tvbook)
         val tvemail: TextView = view.findViewById(R.id.tvemail)
@@ -55,6 +55,7 @@ class ProductAdapter(
                 .load(ServiceBuilder.loadImagePath() + it)
                 .into(holder.imgProfile)
         }
+
 //
 //        holder.edit.setOnClickListener {
 //            val intent = Intent(context,UpdateActivity::class.java)
