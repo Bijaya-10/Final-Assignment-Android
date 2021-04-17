@@ -1,2 +1,3 @@
+include ':soraew'
 include ':app'
 rootProject.name = "Bookstore mngmnt system"
