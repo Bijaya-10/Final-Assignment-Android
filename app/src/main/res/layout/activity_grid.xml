@@ -34,9 +34,10 @@
         android:layout_width="305sp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="-25dp"
+        android:layout_marginTop="-1dp"
         android:background="#2196F3"
         android:text="Comment"
+        android:layout_marginLeft="-5dp"
         android:textSize="20sp" />
 
 

@@ -53,10 +53,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Contact Us Page"
-            android:textSize="38dp"
-            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textStyle="italic"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-black"/>
+
+
+        <Button
+            android:id="@+id/logoutLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="26sp"
+           android:layout_marginLeft="45dp"
+            android:textStyle="bold"
+            android:layout_marginTop="-5dp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:text="Logout"
+            />
 
     </LinearLayout>
 
@@ -66,7 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="270dp"
         app:cardCornerRadius="15dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="20dp"
         >
 
         <RelativeLayout
@@ -166,11 +183,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mail Us"
+                android:text="Mail Us:"
                 android:textSize="25dp"
                 android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="-5dp"
                 android:fontFamily="sans-serif-black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="darsannamaste234@gmail.com"
+                android:textSize="18dp"
+                android:textStyle="italic"
+                android:layout_marginLeft="100dp"
+
+                android:layout_marginTop="20dp"
+                />
 
             <EditText
                 android:layout_width="match_parent"

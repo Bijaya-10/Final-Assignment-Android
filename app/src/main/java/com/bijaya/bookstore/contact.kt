@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import com.bijaya1.weekfiveassignmentone.LoginActivity
 import com.bijaya1.weekfiveassignmentone.R
 
 class contact : AppCompatActivity() {
@@ -22,6 +24,7 @@ class contact : AppCompatActivity() {
     private lateinit var subjectEt : EditText
     private lateinit var messageEt : EditText
     private lateinit var recipientEt : EditText
+    private lateinit var logoutLink: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +42,12 @@ class contact : AppCompatActivity() {
         subjectEt = findViewById(R.id.subjectEt)
         recipientEt = findViewById(R.id.recipientEt)
 
+        logoutLink = findViewById(R.id.logoutLink)
 
+        logoutLink.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
     sendEmailBtn.setOnClickListener {
     val recipient = recipientEt.text.toString().trim()
