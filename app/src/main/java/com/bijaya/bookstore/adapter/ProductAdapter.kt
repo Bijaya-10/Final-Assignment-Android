@@ -2,6 +2,7 @@ package com.bijaya.bookstore.adapter
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bijaya.bookstore.API.ServiceBuilder
 import com.bijaya.bookstore.entity.Product
 import com.bijaya.bookstore.repository.ProductRepository
+import com.bijaya.bookstore.updateactivity
 import com.bijaya1.weekfiveassignmentone.R
 import com.bumptech.glide.Glide
 import kotlinx.coroutines.CoroutineScope
@@ -57,11 +59,16 @@ class ProductAdapter(
         }
 
 //
-//        holder.edit.setOnClickListener {
-//            val intent = Intent(context,UpdateActivity::class.java)
-//            intent.putExtra("student",student)
-//            context.startActivity(intent)
-//        }
+        holder.edit.setOnClickListener {
+            val intent = Intent(context, updateactivity::class.java)
+            intent.putExtra("_id",product._id.toString())
+            intent.putExtra("name",product.Customer_Name.toString())
+            intent.putExtra("book",product.Customer_Book.toString())
+            intent.putExtra("address",product.Customer_Address.toString())
+            intent.putExtra("email",product.Customer_Email.toString())
+            intent.putExtra("image",product.Book_Image.toString());
+            context.startActivity(intent)
+        }
 
         holder.delete.setOnClickListener {
 //            val imagePath = ServiceBuilder.loadImagePath() + product.Book_Image

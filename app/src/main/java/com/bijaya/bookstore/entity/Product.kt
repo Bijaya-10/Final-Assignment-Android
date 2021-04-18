@@ -2,6 +2,7 @@ package com.bijaya.bookstore.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity
 data class Product(
@@ -13,4 +14,4 @@ data class Product(
     val Customer_Email: String? = null,
 
     val Book_Image: String? = null
-)
+):Serializable

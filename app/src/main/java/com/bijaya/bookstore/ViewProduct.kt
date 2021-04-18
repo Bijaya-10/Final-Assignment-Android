@@ -37,11 +37,15 @@ loadProducts()
                 val productRepository = ProductRepository()
                 val response = productRepository.getAllProduct()
                 if (response.success == true){
-                    val lstProduct = response.data
+                    val lstProduct = mutableListOf<Product>()
+                     lstProduct.addAll(response.data!!)
                     withContext(Dispatchers.Main){
-                        recyclerProduct.adapter = ProductAdapter(this@ViewProduct,
-                            lstProduct!! as ArrayList<Product>
+                        val adapter = ProductAdapter(this@ViewProduct,
+                        lstProduct!! as ArrayList<Product>
                         )
+                        recyclerProduct.adapter =adapter;
+
+
                         recyclerProduct.layoutManager = LinearLayoutManager(this@ViewProduct)
                     }
                 }

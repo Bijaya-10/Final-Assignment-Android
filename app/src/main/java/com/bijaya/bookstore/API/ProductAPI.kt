@@ -46,6 +46,13 @@ interface ProductAPI {
         @Path ("id") id:String,
         @Part file: MultipartBody.Part
     ):Response<ImageResponse>
+
+    @PUT("order/update/{id}")
+    suspend fun updateProduct(
+        @Header("Authorization") token: String,
+        @Path("id") id: String,
+        @Body product: Product
+    ):Response<DeleteProductResponse>
 }
 
 

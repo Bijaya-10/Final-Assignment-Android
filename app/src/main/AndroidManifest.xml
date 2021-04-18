@@ -15,13 +15,16 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
-
         android:theme="@style/Theme.WeekFiveAssignmentOne"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.bijaya.bookstore.CommentActivity"></activity>
+        <activity android:name="com.bijaya.bookstore.updateactivity"></activity>
+        <activity android:name=".updateactivity" />
+        <activity android:name="com.updateactivity" />
+        <activity android:name="com.UpdateActivity" />
+        <activity android:name="com.bijaya.bookstore.CommentActivity" />
         <activity android:name="com.bijaya.bookstore.ViewComment" />
         <activity android:name="com.bijaya.bookstore.Users.CommentActivity" />
         <activity android:name="com.bijaya.bookstore.Users.ViewComment" />
